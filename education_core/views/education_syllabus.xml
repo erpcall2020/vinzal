@@ -8,9 +8,13 @@
             <tree string="Syllabus">
                 <field name="name"/>
                 <field name="class_id"/>
+                <field name="type"/>
                 <field name="subject_id"/>
                 <field name="total_hours"/>
                 <field name="description"/>
+                <field name="month"/>
+                <field name="week"/>
+                <field name="day"/>
             </tree>
         </field>
     </record>
@@ -25,6 +29,7 @@
                         <group>
                             <field name="name"/>
                             <field name="class_id" required="1"/>
+                            <field name="type"/>
                         </group>
                         <group>
                             <field name="subject_id"/>
@@ -32,6 +37,9 @@
                         </group>
                     </group>
                     <group>
+                        <field name="month"/>
+                        <field name="week"/>
+                        <field name="day"/>
                         <field name="description"/>
                     </group>
                 </sheet>

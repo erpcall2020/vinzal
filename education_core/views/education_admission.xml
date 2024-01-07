@@ -112,30 +112,53 @@
                             <field name="mother_name" attrs="{'readonly': [('state', '=', 'done')]}"/>
                         </group>
                     </group>
+
+                    <!--Contact Address-->
+
+                    <separator string="Contact Address"/>
                     <group>
-                        <separator string="Contact Address"/>
                         <group>
-                            <div class="o_address_format">
-                                <field name="street" required="1" placeholder="Street..." class="o_address_street"
-                                       attrs="{'readonly': [('state', '=', 'done')]}"/>
-                                <field name="street2" placeholder="Street 2..." class="o_address_street"
-                                       attrs="{'readonly': [('state', '=', 'done')]}"/>
-                                <field name="city" placeholder="City" class="o_address_city"
-                                       attrs="{'readonly': [('state', '=', 'done')]}"/>
-                                <field name="state_id" class="o_address_state" placeholder="State"
-                                       options='{"no_open": True}' attrs="{'readonly': [('state', '=', 'done')]}"/>
-                                <field name="zip" placeholder="ZIP" class="o_address_zip"
-                                       attrs="{'readonly': [('state', '=', 'done')]}"/>
-                                <field name="country_id" placeholder="Country" class="o_address_country"
-                                       options='{"no_open": True, "no_create": True}'
-                                       attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            </div>
+
+                            <field name="street" required="1" placeholder="Street..." class="o_address_street"
+                                   attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="street2" placeholder="Street 2..." class="o_address_street"
+                                   attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="city" placeholder="City" class="o_address_city"
+                                   attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="state_id" class="o_address_state" placeholder="State"
+                                   options='{"no_open": True}' attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="zip" placeholder="ZIP" class="o_address_zip"
+                                   attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="country_id" placeholder="Country" class="o_address_country"
+                                   options='{"no_open": True, "no_create": True}'
+                                   attrs="{'readonly': [('state', '=', 'done')]}"/>
+
                         </group>
+                    </group>
+                    <separator string="Permanent Address"/>
+                    <label for="is_same_address" class="oe_inline"/>
+                    <field name="is_same_address" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                    <div name="permanent_address"
+                         attrs="{'readonly': [('state', '=', 'done')],'invisible': [('is_same_address','=', True)]}">
+                        <group>
+
+                            <field name="per_street" placeholder="Street..." class="o_address_street"/>
+                            <field name="per_street2" placeholder="Street 2..." class="o_address_street"/>
+                            <field name="per_city" placeholder="City" class="o_address_city"/>
+                            <field name="per_state_id" class="o_address_state" placeholder="State"
+                                   options='{"no_open": True}'/>
+                            <field name="per_zip" placeholder="ZIP" class="o_address_zip"/>
+                            <field name="per_country_id" placeholder="Country" class="o_address_country"
+                                   options='{"no_open": True, "no_create": True}'/>
+
+                        </group>
+                    </div>
+                    <!--<group>
                         <label for="is_same_address" class="oe_inline"/>
                         <field name="is_same_address" attrs="{'readonly': [('state', '=', 'done')]}"/>
                         <div name="permanent_address"
                              attrs="{'readonly': [('state', '=', 'done')],'invisible': [('is_same_address','=', True)]}">
-                            <separator string="Permanent Address"/>
+
                             <group>
                                 <div class="o_address_format">
                                     <field name="per_street" placeholder="Street..." class="o_address_street"/>
@@ -149,13 +172,13 @@
                                 </div>
                             </group>
                         </div>
-                    </group>
+                    </group>-->
+
+
                     <separator string="Contact Details"/>
                     <group name="contact_info">
                         <group>
                             <field name="email" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                        </group>
-                        <group>
                             <field name="phone" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mobile" attrs="{'readonly': [('state', '=', 'done')]}"/>
                         </group>

@@ -14,7 +14,7 @@ patch(NavBar.prototype, 'education_theme', {
             $el.show()
             $(ev.target).toggleClass('opened')
             action.css({
-                'margin-left': '270px',
+                'margin-left': '200px',
                 'transition': 'all .1s linear'
             });
         } else {

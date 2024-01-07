@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="tmp_customer_form" name="Partner Form">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+                    <br/>
+                    <br/>
+
+                    <div class="col-md-12">
+                        <form action="/customer/form/submit">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" name="name" id="name" required="true"/>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Student Name:</label>
+                                <input type="text" class="form-control" name="student_name"
+                                       id="student_name" required="true"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" name="email"
+                                       id="email" required="true"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Phone:</label>
+                                <input type="number" class="form-control" name="phone_number"
+                                       id="phone_number" required="true"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Child Age:</label>
+                                <input type="number" class="form-control" name="child_age"
+                                       id="child_age"/>
+                            </div>
+                            <br/>
+
+                            <div class="form-group">
+                               <label for="name">Purpose:</label><br/>
+                               <textarea name="purpose" rows="4" cols="100"
+                                       id="purpose"/>
+                            </div>
+                            <br/>
+                            <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+                        </form>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

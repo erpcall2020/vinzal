@@ -79,7 +79,35 @@ class EducationSyllabus(models.Model):
     class_id = fields.Many2one('education.class', string='Class')
     subject_id = fields.Many2one('education.subject', string='Subject')
     total_hours = fields.Float(string='Total Hours')
-    description = fields.Text(string='Syllabus Modules')
+    description = fields.Text(string='Syllabus Activities')
+    month = fields.Selection([('janauary', 'Janauary'),
+                                      ('feraurary', 'Febrauray'),
+                                        ('march', 'March'),
+                                        ('afril', 'April'),
+                              ('march', 'March'),
+                              ('april', 'April'),('may', 'May'), ('june', 'June'), ('july', 'July'),
+                              ('august', 'August'), ('september', 'September'), ('october', 'October'), ('november', 'November'),
+                              ('december', 'December')],
+                             string='Month',
+                             track_visibility='onchange')
+    week = fields.Selection([('week1', 'Week 1'),
+                              ('week2', 'Week 2'),
+                              ('week3', 'Week 3'),
+                              ('week4', 'Week 4')],
+                             string='Week',
+                             track_visibility='onchange')
+    day = fields.Selection([('monday', 'Monday'),
+                             ('tuesday', 'Tuesday'),
+                             ('wednesday', 'Wednesday'),
+                             ('thursday', 'Thursday'),
+                             ('friday', 'Friday'),
+                             ('saturday', 'Saturday')],
+                            string='Day',
+                            track_visibility='onchange')
+    type = fields.Selection([('oral', 'Oral'),
+                             ('written', 'Written')],
+                            string='Type',
+                            track_visibility='onchange')
 
     @api.constrains('total_hours')
     def validate_time(self):

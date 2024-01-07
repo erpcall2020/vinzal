@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_inquiry_register_tree" model="ir.ui.view">
+        <field name="name">inquiry.register.tree</field>
+        <field name="model">inquiry.register</field>
+        <field name="arch" type="xml">
+            <tree string="Inquiry Register" editable="bottom">
+                <field name="create_date" string="Check-In"/>
+                <field name="name"/>
+                <field name="student_name"/>
+                <field name="child_age"/>
+                <field name="phone_number"/>
+                <field name="email"/>
+                <field name="purpose"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_inquiry_register_form" model="ir.ui.view">
+        <field name="name">inquiry.register.form</field>
+        <field name="model">inquiry.register</field>
+        <field name="arch" type="xml">
+            <form string="Inquiry Register">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="create_date"/>
+                            <field name="name"/>
+                            <field name="student_name"/>
+                            <field name="child_age"/>
+                            <field name="phone_number"/>
+                            <field name="email"/>
+                            <field name="purpose"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--- Menu creation and action defeined -->
+    <record id="inquiry_register_action" model="ir.actions.act_window">
+        <field name="name">Inquiry Register</field>
+        <field name="res_model">inquiry.register</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="inquiry_register_root_menu"
+              name="Inquiry register"
+              web_icon="contacts,static/description/icon.svg"
+              groups="base.group_system"
+              sequence="0"/>
+
+    <menuitem id="inquiry_register_main_menu"
+              name="Inquiry"
+              parent="inquiry_register_root_menu"
+              action="inquiry_register_action"
+              sequence="1"/>
+
+</odoo>

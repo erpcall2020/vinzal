@@ -41,6 +41,19 @@
                                                    required="1"/>
                                         </div>
                                     </div>
+                                    <!--<div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                First Name
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="first_name" type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="first_name"
+                                                   required="1"/>
+                                        </div>
+                                    </div>-->
                                     <div class="col">
                                         <label for="studio1">
                                             <span class="s_website_form_label_content">

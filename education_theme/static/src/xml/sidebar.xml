@@ -18,13 +18,13 @@
                                     <t t-if="app.webIcon">
                                         <img t-if="app.webIcon.includes('.png')"
                                              t-att-title="app.name"
-                                             style="width: 40px !important;height: 40px !important;
-                                             border-radius: 10px !important;margin: 5px 5px 5px 5px;"
+                                             style="width: 30px !important;height: 30px !important;
+                                             border-radius: 8px !important;margin: 5px 5px 5px 5px;"
                                              t-attf-src="data:image/png;base64,{{app.webIconData}}"
                                         />
                                         <img t-if="app.webIcon.includes('.svg')"
                                              t-att-title="app.name"
-                                             style="width: 40px !important;height: 40px !important;border-radius: 10px !important;margin: 5px 5px 5px 5px;"
+                                             style="width: 30px !important;height: 30px !important;border-radius: 8px !important;margin: 5px 5px 5px 5px;"
                                              t-attf-src="data:image/svg+xml;base64,{{app.webIconData}}"/>
                                     </t>
                                     <b class="a_app_menu_title">
@@ -43,7 +43,7 @@
         <xpath expr="//Dropdown" position="replace">
             <li class="dropdown" style="display:flex;">
                 <a id="openSidebar"
-                   style="display: block;cursor: pointer;margin-left: 25px;font-size: 24px;">
+                   style="display: block;cursor: pointer;margin-left: 15px;font-size: 24px;">
                     <i class="fa fa-home fa-lg" t-on-click="openSidebar"/>
                 </a>
             </li>

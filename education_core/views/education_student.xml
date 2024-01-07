@@ -143,48 +143,41 @@
                         </page>
                         <page string="Contact Details">
                             <group>
-                                <group>
-                                    <field name="email"/>
-                                </group>
-                                <group>
-                                    <field name="phone"/>
-                                    <field name="mobile" required="1"/>
-                                </group>
+                                <field name="email"/>
+                                <field name="phone"/>
+                                <field name="mobile" required="1"/>
                             </group>
+                            <separator string="Address"/>
                             <group>
-                                <separator string="Address"/>
-                                <div name="temp_address">
-                                    <group>
-                                        <div class="o_address_format">
-                                            <field name="street" placeholder="Street..." class="o_address_street"/>
-                                            <field name="street2" placeholder="Street 2..." class="o_address_street"/>
-                                            <field name="city" placeholder="City" class="o_address_city"/>
-                                            <field name="state_id" class="o_address_state" placeholder="State"
-                                                   options='{"no_open": True}'/>
-                                            <field name="zip" placeholder="ZIP" class="o_address_zip"/>
-                                            <field name="country_id" placeholder="Country" class="o_address_country"
-                                                   options='{"no_open": True, "no_create": True}'/>
-                                        </div>
-                                    </group>
-                                </div>
-                                <field name="is_same_address" invisible="1"/>
-                                <div name="permanent_address" attrs="{'invisible': [('is_same_address','=', True)]}">
-                                    <separator string="Permanent Address"/>
-                                    <group>
-                                        <div class="o_address_format">
-                                            <field name="per_street" placeholder="Street..." class="o_address_street"/>
-                                            <field name="per_street2" placeholder="Street 2..."
-                                                   class="o_address_street"/>
-                                            <field name="per_city" placeholder="City" class="o_address_city"/>
-                                            <field name="per_state_id" class="o_address_state" placeholder="State"
-                                                   options='{"no_open": True}'/>
-                                            <field name="per_zip" placeholder="ZIP" class="o_address_zip"/>
-                                            <field name="per_country_id" placeholder="Country" class="o_address_country"
-                                                   options='{"no_open": True, "no_create": True}'/>
-                                        </div>
-                                    </group>
-                                </div>
+                                <group>
+                                    <field name="street" placeholder="Street..." class="o_address_street"/>
+                                    <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                    <field name="city" placeholder="City" class="o_address_city"/>
+                                    <field name="state_id" class="o_address_state" placeholder="State"
+                                           options='{"no_open": True}'/>
+                                    <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                    <field name="country_id" placeholder="Country" class="o_address_country"
+                                           options='{"no_open": True, "no_create": True}'/>
+
+                                </group>
                             </group>
+                            <separator string="Permanent Address"/>
+                            <field name="is_same_address" invisible="1"/>
+                            <div name="permanent_address" attrs="{'invisible': [('is_same_address','=', True)]}">
+
+                                <group>
+                                    <field name="per_street" placeholder="Street..." class="o_address_street"/>
+                                    <field name="per_street2" placeholder="Street 2..."
+                                           class="o_address_street"/>
+                                    <field name="per_city" placeholder="City" class="o_address_city"/>
+                                    <field name="per_state_id" class="o_address_state" placeholder="State"
+                                           options='{"no_open": True}'/>
+                                    <field name="per_zip" placeholder="ZIP" class="o_address_zip"/>
+                                    <field name="per_country_id" placeholder="Country" class="o_address_country"
+                                           options='{"no_open": True, "no_create": True}'/>
+
+                                </group>
+                            </div>
                         </page>
                         <page string="Class History">
                             <field name="class_history_ids">
