@@ -16,6 +16,8 @@
                     <h1>Online Admission</h1>
                 </div>
             </section>
+            <br/>
+
             <div id="wrap" class="oe_structure oe_empty">
                 <section class="s_website_form" data-vcss="001"
                          data-snippet="s_website_form">
@@ -24,7 +26,7 @@
                               enctype="multipart/form-data" class="oe_import">
                             <input type="hidden" name="csrf_token"
                                    t-att-value="request.csrf_token()"/>
-                            <div class="card" style="width:75%;border:none;">
+                            <div class="card" style="width:100%;border:none;">
                                 <br/>
                                 <br/>
                                 <div class="row">
@@ -41,19 +43,19 @@
                                                    required="1"/>
                                         </div>
                                     </div>
-                                    <!--<div class="col">
+                                    <div class="col">
                                         <label for="studio1">
                                             <span class="s_website_form_label_content">
-                                                First Name
+                                                Middle Name
                                             </span>
                                         </label>
                                         <div class="col">
-                                            <input id="first_name" type="text"
+                                            <input id="middle_name" type="text"
                                                    class="form-control s_website_form_input"
-                                                   name="first_name"
+                                                   name="middle_name"
                                                    required="1"/>
                                         </div>
-                                    </div>-->
+                                    </div>
                                     <div class="col">
                                         <label for="studio1">
                                             <span class="s_website_form_label_content">
@@ -111,6 +113,34 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Gender
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <select name="gender" class="form-control">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Date of Birth in Words:
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="date_of_birth_words" type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="date_of_birth_words" required="1"/>
+                                        </div>
+                                    </div>
+                                </div>
                                 <br/>
                                 <div class="row">
                                     <div class="col">
@@ -135,6 +165,87 @@
                                             <input id="mother" type="text"
                                                    class="form-control s_website_form_input"
                                                    name="mother" required="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Father's Qualification
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="father" type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="father_qualification" required="1"/>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Mother's Qualification
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="mother_qualification" type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="mother_qualification" required="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Father's Occupation
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="father_occupation" type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="father_occupation" required="1"/>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Mother's Occupation
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="mother_occupation" type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="mother_occupation" required="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Father's Income
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="father_income" type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="father_income" required="1"/>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Mother's Income
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="mother_income" type="text"
+                                                   class="form-control s_website_form_input"
+                                                   name="mother_income" required="1"/>
                                         </div>
                                     </div>
                                 </div>
@@ -191,6 +302,20 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <!--<div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Gender
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <select name="gender" class="form-control">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>-->
                                 </div>
                                 <br/>
                                 <div class="row">
@@ -294,8 +419,79 @@
                                     </div>
                                 </div>
                                 <br/>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Document Type
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <select name="doc_type"
+                                                    class="form-control">
+                                                <t t-foreach="doc_type"
+                                                   t-as="rec">
+                                                    <option t-att-value="rec.id">
+                                                        <t t-esc="rec.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Upload Document
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="doc1" type="file"
+                                                   name="doc1" required="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Document Type
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <select name="doc_type"
+                                                    class="form-control">
+                                                <t t-foreach="doc_type"
+                                                   t-as="rec">
+                                                    <option t-att-value="rec.id">
+                                                        <t t-esc="rec.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Upload Document
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <input id="doc2" type="file"
+                                                   name="doc2" required="1"/>
+                                        </div>
+                                    </div>
+                                </div>
                                 <br/>
                                 <br/>
+                                <br/>
+                                <div class="form-group">
+                                    <label for="agree_to_terms">
+                                        <input type="checkbox" name="agree_to_terms" id="agree_to_terms"
+                                               required="required"/>
+                                        I agree to the terms and conditions
+                                    </label>
+                                </div>
+
                                 <div class="form-group s_website_form_submit"
                                      data-name="Submit Button">
                                     <div style="width: 400px;"

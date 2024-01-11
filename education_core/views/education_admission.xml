@@ -11,6 +11,7 @@
                 <field name="last_name"/>
                 <field name="gender"/>
                 <field name="date_of_birth"/>
+                <field name="date_of_birth_words"/>
                 <field name="email"/>
                 <field name="phone"/>
                 <field name="blood_group"/>
@@ -99,9 +100,13 @@
                     <group>
                         <group>
                             <field name="date_of_birth" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="date_of_birth_words" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="blood_group" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mother_tongue" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="father_name" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="father_qualification" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="father_occupation" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="father_income" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="guardian_name" attrs="{'readonly': [('state', '=', 'done')]}"/>
                         </group>
                         <group>
@@ -110,6 +115,9 @@
                             <field name="religion_id" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="caste_id" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mother_name" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="mother_qualification" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="mother_occupation" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="mother_income" attrs="{'readonly': [('state', '=', 'done')]}"/>
                         </group>
                     </group>
 
