@@ -10,3 +10,13 @@ class InquiryRegister(models.Model):
     phone_number = fields.Char(string='Phone Number')
     email = fields.Char(string='Email')
     purpose = fields.Text(string='Purpose')
+    father_occupation = fields.Text(string='Father Occupation')
+    mother_occupation = fields.Text(string='Mother Occupation')
+    residence = fields.Text(string='Area Of Residence')
+    reference = fields.Text(string='Reference')
+    interested_in_class = fields.Selection([('pre_nursery', 'Pre Nursery'),
+                             ('nursery', 'Nursery'),
+                             ('kgi', 'KGI'),
+                             ('kgii', 'KGII')],
+                            string='Class',
+                            track_visibility='onchange')
