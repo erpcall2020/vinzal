@@ -34,16 +34,19 @@
                             <field name="name"/>
                             <field name="student_name"/>
                             <field name="child_age"/>
+                            <field name="interested_in_class"/>
                             <field name="phone_number"/>
+                            <field name="residence"/>
+                        </group>
+                        <group>
                             <field name="email"/>
                             <field name="purpose"/>
                             <field name="father_occupation"/>
                             <field name="mother_occupation"/>
                             <field name="reference"/>
-                            <field name="residence"/>
-                            <field name="interested_in_class"/>
                         </group>
                     </group>
+
                 </sheet>
             </form>
         </field>
