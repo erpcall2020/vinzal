@@ -9,7 +9,7 @@
     'website': "http://www.erpcall.com",
     'depends': ['base'],
     'data': [
-      #  'security/education_security.xml',
+        'security/visitors_security.xml',
         'views/visitors_register.xml',
         'security/ir.model.access.csv',
     ],
