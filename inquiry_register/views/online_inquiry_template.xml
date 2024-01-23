@@ -10,7 +10,7 @@
                     <div class="col-md-12">
                         <form action="/customer/form/submit">
                             <div class="form-group">
-                                <label for="name">Name:</label>
+                                <label for="name">Parent Name:</label>
                                 <input type="text" class="form-control" name="name" id="name" required="true"/>
 
                             </div>
@@ -26,19 +26,49 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Phone:</label>
-                                <input type="number" class="form-control" name="phone_number"
+                                <input type="phone" class="form-control" name="phone_number"
                                        id="phone_number" required="true"/>
                             </div>
                             <div class="form-group">
                                 <label for="name">Child Age:</label>
-                                <input type="number" class="form-control" name="child_age"
+                                <input type="float" class="form-control" name="child_age"
                                        id="child_age"/>
                             </div>
                             <br/>
 
                             <div class="form-group">
-                               <label for="name">Purpose:</label><br/>
-                               <textarea name="purpose" rows="4" cols="100"
+                                <label for="interested_in_class">Interested In Class:</label>
+                                <select class="form-control" name="interested_in_class" id="interested_in_class"
+                                        required="true">
+                                    <option value="pre_nursery">Pre Nursery</option>
+                                    <option value="nursery">Nursery</option>
+                                    <option value="kgi">KGI</option>
+                                    <option value="kgii">KGII</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="father_occupation">Father Occupation:</label>
+                                <input type="text" class="form-control" name="father_occupation"
+                                       id="father_occupation"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="mother_occupation">Mother Occupation:</label>
+                                <input type="text" class="form-control" name="mother_occupation"
+                                       id="mother_occupation"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="reference">Reference:</label>
+                                <input type="text" class="form-control" name="reference"
+                                       id="reference"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="residence">Residence:</label>
+                                <input type="text" class="form-control" name="residence"
+                                       id="residence"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="purpose">Purpose:</label>
+                                <input type="text" class="form-control" name="purpose"
                                        id="purpose"/>
                             </div>
                             <br/>

@@ -17,7 +17,13 @@ class PartnerForm(http.Controller):
             'email': post.get('email'),
             'phone_number': post.get('phone_number'),
             'child_age': post.get('child_age'),
-            'purpose': post.get('purpose')
+            'father_occupation': post.get('father_occupation'),
+            'mother_occupation': post.get('mother_occupation'),
+            'reference': post.get('reference'),
+            'interested_in_class': post.get('interested_in_class'),
+            'residence': post.get('residence'),
+            'reference': post.get('reference'),
+            'purpose': post.get('purpose'),
         })
 
         vals = {

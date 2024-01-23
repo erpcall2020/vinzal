@@ -3,6 +3,7 @@ from odoo import fields, models
 
 class InquiryRegister(models.Model):
     _name = 'inquiry.register'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string='Parent Name')
     student_name = fields.Char(string='Student Name')
@@ -14,6 +15,7 @@ class InquiryRegister(models.Model):
     mother_occupation = fields.Text(string='Mother Occupation')
     residence = fields.Text(string='Area Of Residence')
     reference = fields.Text(string='Reference')
+    remark = fields.Text(string='Remark')
     interested_in_class = fields.Selection([('pre_nursery', 'Pre Nursery'),
                              ('nursery', 'Nursery'),
                              ('kgi', 'KGI'),
