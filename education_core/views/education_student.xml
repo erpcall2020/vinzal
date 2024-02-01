@@ -118,7 +118,7 @@
                             <group>
                                 <group>
                                     <field name="class_id"/>
-<!--                                    <field name="sec_lang"/>-->
+                                    <field name="sec_lang"/>
                                 </group>
                                 <group>
                                     <field name="company_id" groups="base.group_multi_company"/>
@@ -208,7 +208,7 @@
             <search string="Search Students">
                 <field name="class_id"/>
                 <field name="medium"/>
-<!--                <field name="sec_lang"/>-->
+                <field name="sec_lang"/>
                 <field name="gender"/>
                 <field name="religion_id"/>
                 <field name="caste_id"/>

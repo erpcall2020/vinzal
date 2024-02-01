@@ -144,7 +144,7 @@
             <field name="medium" ref="education_medium_data"/>
             <field name="admission_class" ref="education_class_data"/>
             <field name="academic_year_id" ref="education_academic_year_data"/>
-<!--            <field name="sec_lang" ref="education_subject_data3"/>-->
+            <field name="sec_lang" ref="education_subject_data3"/>
             <field name="father_name">Daniel George</field>
             <field name="mother_name">Lissa Abraham</field>
             <field name="guardian_name" ref="education_parent_data"/>
@@ -166,7 +166,7 @@
             <field name="medium" ref="education_medium_data"/>
             <field name="admission_class" ref="education_class_data"/>
             <field name="academic_year_id" ref="education_academic_year_data"/>
-<!--            <field name="sec_lang" ref="education_subject_data3"/>-->
+            <field name="sec_lang" ref="education_subject_data3"/>
             <field name="father_name">Joseph Alex</field>
             <field name="mother_name">Smruthi K</field>
             <field name="guardian_name" ref="education_parent_data2"/>
@@ -201,7 +201,7 @@
             <field name="medium" ref="education_medium_data"/>
             <field name="class_id" ref="class_division_data"/>
             <field name="admission_class" ref="education_class_data"/>
-<!--            <field name="sec_lang" ref="education_subject_data3"/>-->
+            <field name="sec_lang" ref="education_subject_data3"/>
             <field name="father_name">Joseph Alex</field>
             <field name="mother_name">Smruthi K</field>
             <field name="guardian_name" ref="education_parent_data2"/>

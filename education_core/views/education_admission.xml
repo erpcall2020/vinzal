@@ -89,7 +89,7 @@
                             <field name="academic_year_id" required="1" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="admission_date" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="admission_class" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <!--                            <field name="sec_lang" attrs="{'readonly': [('state', '=', 'done')]}"/>-->
+                            <field name="sec_lang" attrs="{'readonly': [('state', '=', 'done')]}"/>
                         </group>
                         <group>
                             <field name="medium" attrs="{'readonly': [('state', '=', 'done')]}"/>
@@ -138,7 +138,7 @@
                                    attrs="{'readonly': [('state', '=', 'done')]}"/>
                         </group>
                         <group>
-                             <field name="state_id" class="o_address_state" placeholder="State"
+                            <field name="state_id" class="o_address_state" placeholder="State"
                                    options='{"no_open": True}' attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="zip" placeholder="ZIP" class="o_address_zip"
                                    attrs="{'readonly': [('state', '=', 'done')]}"/>
@@ -244,10 +244,10 @@
             <search string="Search Application">
                 <field name="admission_class"/>
                 <field name="medium"/>
-                <!--                <field name="sec_lang"/>-->
+                <field name="sec_lang"/>
                 <field name="gender"/>
-                <!--                <field name="religion_id"/>-->
-                <!--                <field name="caste_id"/>-->
+                <field name="religion_id"/>
+                <field name="caste_id"/>
                 <field name="mother_tongue"/>
                 <filter string="New Application" name="new_application" domain="[('state','!=','done')]"/>
                 <filter string="Draft" name="draft_filter" domain="[('state','=','draft')]"/>

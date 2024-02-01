@@ -74,9 +74,9 @@ class StudentApplication(models.Model):
                 'image_1920': rec.image,
                 'is_student': True,
                 'medium': rec.medium.id,
-                # 'religion_id': rec.religion_id.id,
-                # 'caste_id': rec.caste_id.id,
-                # 'sec_lang': rec.sec_lang.id,
+                'religion_id': rec.religion_id.id,
+                'caste_id': rec.caste_id.id,
+                'sec_lang': rec.sec_lang.id,
                 'mother_tongue': rec.mother_tongue.id,
                 'admission_class': rec.admission_class.id,
                 'company_id': rec.company_id.id,
@@ -192,10 +192,10 @@ class StudentApplication(models.Model):
     medium = fields.Many2one(
         'education.medium', string="Medium",
         help="Choose the Medium of class, like English, Hindi etc")
-    # sec_lang = fields.Many2one('education.subject', string="Second language",
-    #                            required=True,
-    #                            domain=[('is_language', '=', True)],
-    #                            help="Choose the Second language")
+    sec_lang = fields.Many2one('education.subject', string="Second language",
+                               required=True,
+                               domain=[('is_language', '=', True)],
+                               help="Choose the Second language")
     mother_tongue = fields.Many2one('education.mother.tongue',
                                     string="Mother Tongue",
                                     required=True,

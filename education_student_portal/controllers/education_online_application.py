@@ -14,7 +14,7 @@ class OnlineAdmission(http.Controller):
             'class': request.env['education.class'].sudo().search([]),
             'year': request.env['education.academic.year'].sudo().search([]),
             'medium': request.env['education.medium'].sudo().search([]),
-            # 'sec_lang': request.env['education.subject'].sudo().search([]),
+            'sec_lang': request.env['education.subject'].sudo().search([]),
             'tongue': request.env['education.mother.tongue'].sudo().search([]),
             'doc_type': request.env['document.document'].sudo().search([])
         }
@@ -49,7 +49,7 @@ class OnlineAdmission(http.Controller):
                 'academic_year_id': vals.get('academic_year'),
                 'mother_tongue': vals.get('tongue'),
                 'medium': vals.get('medium'),
-                # 'sec_lang': vals.get('sec_lang'),
+                'sec_lang': vals.get('sec_lang'),
                 'admission_class': vals.get('classes'),
                 'street': vals.get('communication_address'),
                 'per_street': vals.get('communication_address'),
