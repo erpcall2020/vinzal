@@ -74,6 +74,7 @@ class EducationMotherTongue(models.Model):
 
 class EducationSyllabus(models.Model):
     _name = 'education.syllabus'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char('Name', required=True)
     class_id = fields.Many2one('education.class', string='Class')
@@ -108,6 +109,11 @@ class EducationSyllabus(models.Model):
                              ('written', 'Written')],
                             string='Type',
                             track_visibility='onchange')
+
+    state = fields.Selection([('planned', 'Planned'), ('going_on', 'Going-on'), ('done', 'Done')],
+                             string='State', required=True, default='planned',)
+    assignee_id = fields.Many2one('education.faculty', string='Assignee')
+    assign_date = fields.Date(string="Assign Date")
 
     @api.constrains('total_hours')
     def validate_time(self):

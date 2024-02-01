@@ -58,6 +58,8 @@
                         </button>
                     </div>
                     <field name="image" widget="image" class="oe_left oe_avatar"/>
+                    <!--                    <field name="image1" widget="image" class="oe_left oe_avatar"/>-->
+                    <!--                    <field name="image2" widget="image" class="oe_left oe_avatar"/>-->
                     <div class="oe_title">
                         <h3>
                             <field name="application_no"/>
@@ -87,13 +89,13 @@
                             <field name="academic_year_id" required="1" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="admission_date" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="admission_class" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <field name="sec_lang" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <!--                            <field name="sec_lang" attrs="{'readonly': [('state', '=', 'done')]}"/>-->
                         </group>
                         <group>
                             <field name="medium" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="company_id" groups="base.group_multi_company"
                                    attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <field name="prev_school" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <!--                            <field name="prev_school" attrs="{'readonly': [('state', '=', 'done')]}"/>-->
                         </group>
                     </group>
                     <separator string="Personal Details"/>
@@ -101,23 +103,25 @@
                         <group>
                             <field name="date_of_birth" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="date_of_birth_words" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="sssmid" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="blood_group" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mother_tongue" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="father_name" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="father_qualification" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="father_occupation" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <field name="father_income" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <field name="guardian_name" attrs="{'readonly': [('state', '=', 'done')]}"/>
+
                         </group>
                         <group>
                             <field name="gender" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <field name="nationality" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <field name="religion_id" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <field name="caste_id" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <!-- <field name="nationality" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                             <field name="religion_id" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                             <field name="caste_id" attrs="{'readonly': [('state', '=', 'done')]}"/>-->
                             <field name="mother_name" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mother_qualification" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mother_occupation" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mother_income" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="father_income" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                            <field name="guardian_name" attrs="{'readonly': [('state', '=', 'done')]}"/>
                         </group>
                     </group>
 
@@ -126,21 +130,21 @@
                     <separator string="Contact Address"/>
                     <group>
                         <group>
-
                             <field name="street" required="1" placeholder="Street..." class="o_address_street"
                                    attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="street2" placeholder="Street 2..." class="o_address_street"
                                    attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="city" placeholder="City" class="o_address_city"
                                    attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <field name="state_id" class="o_address_state" placeholder="State"
+                        </group>
+                        <group>
+                             <field name="state_id" class="o_address_state" placeholder="State"
                                    options='{"no_open": True}' attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="zip" placeholder="ZIP" class="o_address_zip"
                                    attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="country_id" placeholder="Country" class="o_address_country"
                                    options='{"no_open": True, "no_create": True}'
                                    attrs="{'readonly': [('state', '=', 'done')]}"/>
-
                         </group>
                     </group>
                     <separator string="Permanent Address"/>
@@ -240,10 +244,10 @@
             <search string="Search Application">
                 <field name="admission_class"/>
                 <field name="medium"/>
-                <field name="sec_lang"/>
+                <!--                <field name="sec_lang"/>-->
                 <field name="gender"/>
-                <field name="religion_id"/>
-                <field name="caste_id"/>
+                <!--                <field name="religion_id"/>-->
+                <!--                <field name="caste_id"/>-->
                 <field name="mother_tongue"/>
                 <filter string="New Application" name="new_application" domain="[('state','!=','done')]"/>
                 <filter string="Draft" name="draft_filter" domain="[('state','=','draft')]"/>
@@ -258,10 +262,10 @@
                             domain="[]" context="{'group_by': 'gender'}"/>
                     <filter string='Medium' name="medium"
                             domain="[]" context="{'group_by': 'medium'}"/>
-                    <filter string='Religion' name="religion"
-                            domain="[]" context="{'group_by': 'religion_id'}"/>
-                    <filter string='Caste' name="caste"
-                            domain="[]" context="{'group_by' : 'caste_id'}"/>
+                    <!--                    <filter string='Religion' name="religion"-->
+                    <!--                            domain="[]" context="{'group_by': 'religion_id'}"/>-->
+                    <!--                    <filter string='Caste' name="caste"-->
+                    <!--                            domain="[]" context="{'group_by' : 'caste_id'}"/>-->
                     <filter string='Mother Tongue' name="mother_tongue"
                             domain="[]" context="{'group_by': 'mother_tongue'}"/>
                 </group>

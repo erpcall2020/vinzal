@@ -67,16 +67,16 @@ class StudentApplication(models.Model):
                 'gender': rec.gender,
                 'date_of_birth': rec.date_of_birth,
                 'blood_group': rec.blood_group,
-                'nationality': rec.nationality.id,
+                # 'nationality': rec.nationality.id,
                 'email': rec.email,
                 'mobile': rec.mobile,
                 'phone': rec.phone,
                 'image_1920': rec.image,
                 'is_student': True,
                 'medium': rec.medium.id,
-                'religion_id': rec.religion_id.id,
-                'caste_id': rec.caste_id.id,
-                'sec_lang': rec.sec_lang.id,
+                # 'religion_id': rec.religion_id.id,
+                # 'caste_id': rec.caste_id.id,
+                # 'sec_lang': rec.sec_lang.id,
                 'mother_tongue': rec.mother_tongue.id,
                 'admission_class': rec.admission_class.id,
                 'company_id': rec.company_id.id,
@@ -173,23 +173,29 @@ class StudentApplication(models.Model):
                               help="Enter Middle name of Student")
     last_name = fields.Char(string='Last Name',
                             help="Enter Last name of Student")
-    prev_school = fields.Many2one('education.institute',
-                                  string='Previous Institution',
-                                  help="Enter the name of previous institution")
+    # prev_school = fields.Many2one('education.institute',
+    #                               string='Previous Institution',
+    #                               help="Enter the name of previous institution")
     image = fields.Binary(string='Image',
                           attachment=True,
                           help="Provide the image of the Student")
+    # image1 = fields.Binary(string='Image1',
+    #                       attachment=True,
+    #                       help="Provide the image of the Student")
+    # image2 = fields.Binary(string='Image2',
+    #                       attachment=True,
+    #                       help="Provide the image of the Student")
     academic_year_id = fields.Many2one(
         'education.academic.year',
         string='Academic Year',
         help="Choose Academic year for which the admission is choosing")
     medium = fields.Many2one(
-        'education.medium', string="Medium", required=True,
+        'education.medium', string="Medium",
         help="Choose the Medium of class, like English, Hindi etc")
-    sec_lang = fields.Many2one('education.subject', string="Second language",
-                               required=True,
-                               domain=[('is_language', '=', True)],
-                               help="Choose the Second language")
+    # sec_lang = fields.Many2one('education.subject', string="Second language",
+    #                            required=True,
+    #                            domain=[('is_language', '=', True)],
+    #                            help="Choose the Second language")
     mother_tongue = fields.Many2one('education.mother.tongue',
                                     string="Mother Tongue",
                                     required=True,
@@ -211,9 +217,9 @@ class StudentApplication(models.Model):
                         help="Enter Phone no. for contact purpose")
     mobile = fields.Char(string="Mobile", required=True,
                          help="Enter Mobile num for contact purpose")
-    nationality = fields.Many2one('res.country', string='Nationality',
-                                  ondelete='restrict',
-                                  help="Select the Nationality")
+    # nationality = fields.Many2one('res.country', string='Nationality',
+    #                               ondelete='restrict',
+    #                               help="Select the Nationality")
 
     street = fields.Char(string='Street', help="Enter the street")
     street2 = fields.Char(string='Street2', help="Enter the street2")
@@ -250,10 +256,10 @@ class StudentApplication(models.Model):
     description = fields.Text(string="Note")
     father_name = fields.Char(string="Father Name", help="Proud to say my father is")
     mother_name = fields.Char(string="Mother Name", help="My mother's name is")
-    religion_id = fields.Many2one('religion.religion', string="Religion",
-                                  help="My Religion is ")
-    caste_id = fields.Many2one('religion.caste', string="Caste",
-                               help="My Caste is ")
+    # religion_id = fields.Many2one('religion.religion', string="Religion",
+    #                               help="My Religion is ")
+    # caste_id = fields.Many2one('religion.caste', string="Caste",
+    #                            help="My Caste is ")
     class_id = fields.Many2one('education.class.division', string="Class")
     active = fields.Boolean(string='Active', default=True)
     document_count = fields.Integer(compute='_document_count',
@@ -289,4 +295,5 @@ class StudentApplication(models.Model):
     mother_qualification = fields.Char(string="Mother Qualification")
     mother_occupation = fields.Char(string="Mother Occupation")
     mother_income = fields.Char(string="Mother Income")
+    sssmid = fields.Char(string="SSSMID")
 

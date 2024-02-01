@@ -36,7 +36,7 @@
         'data/online_application_menu.xml',
         'views/education_student_views.xml',
         'views/student_portal_template.xml',
-        'views/online_application_template.xml',
+       'views/online_application_template.xml',
     ],
     'images': ['static/description/banner.jpg'],
     'license': 'AGPL-3',

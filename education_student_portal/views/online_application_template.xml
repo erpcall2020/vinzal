@@ -8,12 +8,29 @@
                     data-vcss="001" data-snippet="s_title"
                     data-scroll-background-ratio="1">
                 <span class="s_parallax_bg oe_img_bg"
-                      style="background-position: 50% 0;">
+                      style="background-position: 100% 0;">
                     <img src="https://media.istockphoto.com/id/1410336912/photo/happy-teacher-and-schoolgirl-giving-high-five-during-class-at-school.jpg?s=1024x1024&amp;w=is&amp;k=20&amp;c=6kzktqHzjmCr5NT54ARvu5zV5HjOyzeRzvQfmhsQZjY="/>
                 </span>
                 <div class="o_we_bg_filter bg-black-50"/>
                 <div class="container">
                     <h1>Online Admission</h1>
+                </div>
+            </section>
+            <section class="s_text_block pt40 pb40 o_colored_level" data-snippet="s_text_block" data-name="Text"
+                     style="background-image: none;">
+                <div class="container s_allow_columns">
+                    <p class="o_default_snippet_text">Great stories have a <b class="o_default_snippet_text">
+                        personality</b>. Consider telling a great story that provides personality. Writing a story with
+                        personality for potential clients will assist with making a relationship connection. This shows
+                        up in small quirks like word choices or phrases. Write from your point of view, not from someone
+                        else's experience.
+                    </p>
+                    <p class="o_default_snippet_text">Great stories are <b class="o_default_snippet_text">for everyone
+                    </b> even when only written <b class="o_default_snippet_text">for just one person</b>. If you try to
+                        write with a wide, general audience in mind, your story will sound fake and lack emotion. No one
+                        will be interested. Write for one person. If it’s genuine for the one, it’s genuine for the
+                        rest.
+                    </p>
                 </div>
             </section>
             <br/>
@@ -26,485 +43,534 @@
                               enctype="multipart/form-data" class="oe_import">
                             <input type="hidden" name="csrf_token"
                                    t-att-value="request.csrf_token()"/>
-                            <div class="card" style="width:100%;border:none;">
-                                <br/>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                First Name
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="first_name" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="first_name"
-                                                   required="1"/>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Middle Name
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="middle_name" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="middle_name"
-                                                   required="1"/>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Last Name
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="last_name" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="last_name"
-                                                   required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Email
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="email" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="email" required="1"/>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Phone
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="phone" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="phone" required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Date of Birth
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="date" name="date"
-                                                   type="date"
-                                                   class="form-control s_website_form_input"
-                                                   required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Gender
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="gender" class="form-control">
-                                                <option value="male">Male</option>
-                                                <option value="female">Female</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Date of Birth in Words:
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="date_of_birth_words" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="date_of_birth_words" required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Father's Name
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="father" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="father" required="1"/>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Mother's Name
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="mother" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="mother" required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Father's Qualification
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="father" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="father_qualification" required="1"/>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Mother's Qualification
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="mother_qualification" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="mother_qualification" required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Father's Occupation
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="father_occupation" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="father_occupation" required="1"/>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Mother's Occupation
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="mother_occupation" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="mother_occupation" required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Father's Income
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="father_income" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="father_income" required="1"/>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Mother's Income
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="mother_income" type="text"
-                                                   class="form-control s_website_form_input"
-                                                   name="mother_income" required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Address
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <textarea id="communication_address"
-                                                      type="text"
-                                                      class="form-control s_website_form_input"
-                                                      name="communication_address"
-                                                      required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Academic Year
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="academic_year"
-                                                    class="form-control">
-                                                <t t-foreach="year" t-as="rec">
-                                                    <option t-att-value="rec.id">
-                                                        <t t-esc="rec.name"/>
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Class
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="classes"
-                                                    class="form-control">
-                                                <t t-foreach="class" t-as="rec">
-                                                    <option t-att-value="rec.id">
-                                                        <t t-esc="rec.name"/>
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!--<div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Gender
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="gender" class="form-control">
-                                                <option value="male">Male</option>
-                                                <option value="female">Female</option>
-                                                <option value="other">Other</option>
-                                            </select>
-                                        </div>
-                                    </div>-->
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Medium
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="medium"
-                                                    class="form-control">
-                                                <t t-foreach="medium"
-                                                   t-as="rec">
-                                                    <option t-att-value="rec.id">
-                                                        <t t-esc="rec.name"/>
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Second Language
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="sec_lang"
-                                                    class="form-control">-->
-                                                <t t-foreach="sec_lang"
-                                                   t-as="rec">
-                                                    <option t-att-value="rec.id">
-                                                        <t t-esc="rec.name"/>
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Mother Tongue
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="tongue"
-                                                    class="form-control">
-                                                <t t-foreach="tongue"
-                                                   t-as="rec">
-                                                    <option t-att-value="rec.id">
-                                                        <t t-esc="rec.name"/>
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Document Type
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="doc_type"
-                                                    class="form-control">
-                                                <t t-foreach="doc_type"
-                                                   t-as="rec">
-                                                    <option t-att-value="rec.id">
-                                                        <t t-esc="rec.name"/>
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Upload Document
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="doc" type="file"
-                                                   name="doc" required="1"/>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Upload Your Photo
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="image" type="file"
-                                                   accept="image/png,image/jpeg"
-                                                   name="image" required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Document Type
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="doc_type"
-                                                    class="form-control">
-                                                <t t-foreach="doc_type"
-                                                   t-as="rec">
-                                                    <option t-att-value="rec.id">
-                                                        <t t-esc="rec.name"/>
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Upload Document
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="doc1" type="file"
-                                                   name="doc1" required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Document Type
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="doc_type"
-                                                    class="form-control">
-                                                <t t-foreach="doc_type"
-                                                   t-as="rec">
-                                                    <option t-att-value="rec.id">
-                                                        <t t-esc="rec.name"/>
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Upload Document
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <input id="doc2" type="file"
-                                                   name="doc2" required="1"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <br/>
-                                <br/>
-                                <div class="form-group">
-                                    <label for="agree_to_terms">
-                                        <input type="checkbox" name="agree_to_terms" id="agree_to_terms"
-                                               required="required"/>
-                                        I agree to the terms and conditions
+                            <div class="card" style="width:100%;border:none;"/>
+                            <br/>
+                            <br/>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            First Name
+                                        </span>
                                     </label>
+                                    <div class="col">
+                                        <input id="first_name" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="first_name"
+                                               required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Middle Name
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="middle_name" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="middle_name"
+                                               required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Last Name
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="last_name" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="last_name"
+                                               required="1"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Email
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="email" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="email" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Phone
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="phone" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="phone" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            SSSMID
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="sssmid" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="sssmid" required="0"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Date of Birth
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="date" name="date"
+                                               type="date"
+                                               class="form-control s_website_form_input"
+                                               required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Date of Birth in Words:
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="date_of_birth_words" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="date_of_birth_words" required="1"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Gender
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <select name="gender" class="form-control">
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
                                 </div>
 
-                                <div class="form-group s_website_form_submit"
-                                     data-name="Submit Button">
-                                    <div style="width: 400px;"
-                                         class="s_website_form_label"/>
-                                    <button type="submit"
-                                            class="btn btn-primary"
-                                            style="width:150px;height:50px">
-                                        Submit
-                                    </button>
-                                </div>
-                                <br/>
-                                <br/>
                             </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Father's Name
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="father" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="father" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Mother's Name
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="mother" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="mother" required="1"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Father's Qualification
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="father" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="father_qualification" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Mother's Qualification
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="mother_qualification" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="mother_qualification" required="1"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Father's Occupation
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="father_occupation" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="father_occupation" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Mother's Occupation
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="mother_occupation" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="mother_occupation" required="1"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Father's Income
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="father_income" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="father_income" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Mother's Income
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="mother_income" type="text"
+                                               class="form-control s_website_form_input"
+                                               name="mother_income" required="1"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Address
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <textarea id="communication_address"
+                                                  type="text"
+                                                  class="form-control s_website_form_input"
+                                                  name="communication_address"
+                                                  required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Academic Year
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <select name="academic_year"
+                                                class="form-control">
+                                            <t t-foreach="year" t-as="rec">
+                                                <option t-att-value="rec.id">
+                                                    <t t-esc="rec.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Class
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <select name="classes"
+                                                class="form-control">
+                                            <t t-foreach="class" t-as="rec">
+                                                <option t-att-value="rec.id">
+                                                    <t t-esc="rec.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Medium
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <select name="medium"
+                                                class="form-control">
+                                            <t t-foreach="medium"
+                                               t-as="rec">
+                                                <option t-att-value="rec.id">
+                                                    <t t-esc="rec.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Mother Tongue
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <select name="tongue"
+                                                class="form-control">
+                                            <t t-foreach="tongue"
+                                               t-as="rec">
+                                                <option t-att-value="rec.id">
+                                                    <t t-esc="rec.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Student Photo
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="image" type="file"
+                                               accept="image/png,image/jpeg"
+                                               name="image" required="1"/>
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Student Aadhar Card
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc" type="file"
+                                               name="doc" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Student Birth Certificate
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc1" type="file"
+                                               name="doc1" required="1"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Mother Photo
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc2" type="file"
+                                               name="doc2" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Mother Aadhar
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc3" type="file"
+                                               name="doc3" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Mother Sign
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc4" type="file"
+                                               name="doc4" required="1"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--<div class="col">
+                                <label for="studio1">
+                                    <span class="s_website_form_label_content">
+                                        Document Type
+                                    </span>
+                                </label>
+                                <div class="col">
+                                    <select name="doc_type1"
+                                            class="form-control">
+                                        <t t-foreach="doc_type1"
+                                           t-as="rec">
+                                            <option t-att-value="rec.id">
+                                                <t t-esc="rec.name"/>
+                                            </option>
+                                        </t>
+                                    </select>
+                                </div>
+                            </div>-->
+
+
+                            <div class="row">
+                                <!--<div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Document Type
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <select name="doc_type2"
+                                                class="form-control">
+                                            <t t-foreach="doc_type2"
+                                               t-as="rec">
+                                                <option t-att-value="rec.id">
+                                                    <t t-esc="rec.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </div>-->
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Father Photo
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc5" type="file"
+                                               name="doc5" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Father Aadhar
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc6" type="file"
+                                               name="doc6" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Father Sign
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc7" type="file"
+                                               name="doc7" required="1"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Guardian Photo
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc8" type="file"
+                                               name="doc8" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Guardian Aadhar
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc9" type="file"
+                                               name="doc9" required="1"/>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Guardian Sign
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <input id="doc10" type="file"
+                                               name="doc10" required="1"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="agree_to_terms">
+                                    <input type="checkbox" name="agree_to_terms" id="agree_to_terms"
+                                           required="required"/>
+                                    I agree to the terms and conditions
+                                </label>
+                            </div>
+
+                            <div class="form-group s_website_form_submit"
+                                 data-name="Submit Button">
+                                <div style="width: 400px;"
+                                     class="s_website_form_label"/>
+                                <button type="submit"
+                                        class="btn btn-primary"
+                                        style="width:150px;height:50px">
+                                    Submit
+                                </button>
+                            </div>
+                            <br/>
+                            <br/>
+
                         </form>
                     </div>
                 </section>

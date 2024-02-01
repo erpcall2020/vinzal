@@ -20,10 +20,10 @@
                         <div class="oe_kanban_global_click o_res_partner_kanban">
                             <div class="o_kanban_image">
                                 <t t-if="record.image_1920.raw_value">
-                                    <img t-att-src="kanban_image('education.student', 'image_1920', record.id.raw_value)"/>
+                                    <img t-att-src="kanban_image('education.student', 'image_1920', record.id.raw_value)"  alt="Default Avatar"/>
                                 </t>
                                 <t t-if="!record.image_1920.raw_value">
-                                    <img t-att-src='_s + "/base/static/src/img/avatar.png"'/>
+                                    <img t-att-src='_s + "/base/static/src/img/avatar.png"'  alt="Default Avatar"/>
                                 </t>
                             </div>
                             <div class="oe_kanban_details">
@@ -42,11 +42,11 @@
                                         <field name="guardian_name"/>
                                     </li>
                                     <li t-if="record.mobile.raw_value">
-                                        <i class="fa fa-phone"/>
+                                        <i class="fa fa-phone" title="Phone"></i>
                                         <field name="mobile"/>
                                     </li>
                                     <li t-if="record.email.raw_value">
-                                        <i class="fa fa-envelope"/>
+                                        <i class="fa fa-phone" title="Mail"></i>
                                         <a t-attf-href="mailto:#{record.email.value}">
                                             <field name="email"/>
                                         </a>
@@ -86,7 +86,10 @@
                     <div class="oe_button_box" name="button_box">
                         <button name="student_documents" type="object" widget="statinfo"
                                 class="oe_stat_button" icon="fa-calendar" string="Documents"/>
+                        <button name="student_documents" type="object" widget="statinfo"
+                                class="oe_stat_button" icon="fa-calendar" string="Invoice"/>
                     </div>
+
                     <field name="image_1920" widget="image" class="oe_avatar"
                            options="{&quot;preview_image&quot;: &quot;image_128&quot;}"/>
                     <div class="oe_title">
@@ -115,7 +118,7 @@
                             <group>
                                 <group>
                                     <field name="class_id"/>
-                                    <field name="sec_lang"/>
+<!--                                    <field name="sec_lang"/>-->
                                 </group>
                                 <group>
                                     <field name="company_id" groups="base.group_multi_company"/>
@@ -205,7 +208,7 @@
             <search string="Search Students">
                 <field name="class_id"/>
                 <field name="medium"/>
-                <field name="sec_lang"/>
+<!--                <field name="sec_lang"/>-->
                 <field name="gender"/>
                 <field name="religion_id"/>
                 <field name="caste_id"/>

@@ -83,11 +83,11 @@
                                     <span style="margin-left:100px"
                                           t-esc="values['student'].class_id.name"/>
                                 </div>
-                                <div class="col-sm">
+                                <!--<div class="col-sm">
                                     <label>Second Language</label>
                                     <span style="margin-left:60px"
                                           t-esc="values['student'].sec_lang.name"/>
-                                </div>
+                                </div>-->
                             </div>
                             <br/>
                             <div class="row">

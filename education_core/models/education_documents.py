@@ -72,8 +72,7 @@ class EducationDocuments(models.Model):
     name = fields.Char(string='Serial Number', copy=False,
                        default=lambda self: _('New'))
     document_name = fields.Many2one('document.document', string='Document Type',
-                                    required=True,
-                                    help="Choose the type of the Document")
+                                          help="Choose the type of the Document")
     description = fields.Text(string='Description', copy=False,
                               help="Enter a description about the document")
     has_hard_copy = fields.Boolean(
@@ -127,5 +126,5 @@ class DocumentDocument(models.Model):
     _name = 'document.document'
     _description = "Documents Type"
 
-    name = fields.Char(string='Name', required=True)
+    name = fields.Char(string='Name')
     description = fields.Char(string='Description')

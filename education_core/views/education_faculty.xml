@@ -17,10 +17,10 @@
                         <div class="oe_kanban_global_click o_res_partner_kanban">
                             <div class="o_kanban_image">
                                 <t t-if="record.image.raw_value">
-                                    <img t-att-src="kanban_image('education.faculty', 'image', record.id.raw_value)"/>
+                                    <img t-att-src="kanban_image('education.faculty', 'image', record.id.raw_value)"  alt="Default Avatar"/>
                                 </t>
                                 <t t-if="!record.image.raw_value">
-                                    <img t-att-src='_s + "/base/static/src/img/avatar.png"'/>
+                                    <img t-att-src='_s + "/base/static/src/img/avatar.png"'  alt="Default Avatar"/>
                                 </t>
                             </div>
                             <div class="oe_kanban_details">
@@ -28,11 +28,11 @@
                                 <div class="o_kanban_tags_section oe_kanban_partner_categories"/>
                                 <ul>
                                     <li t-if="record.mobile.raw_value">
-                                        <i class="fa fa-phone"/>
+                                        <i class="fa fa-phone" title="Phone"></i>
                                         <field name="mobile"/>
                                     </li>
                                     <li t-if="record.email.raw_value">
-                                        <i class="fa fa-envelope"/>
+                                        <i class="fa fa-phone" title="Mail"></i>
                                         <a t-attf-href="mailto:#{record.email.value}">
                                             <field name="email"/>
                                         </a>
