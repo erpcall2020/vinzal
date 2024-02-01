@@ -95,7 +95,7 @@
                             <field name="medium" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="company_id" groups="base.group_multi_company"
                                    attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <!--                            <field name="prev_school" attrs="{'readonly': [('state', '=', 'done')]}"/>-->
+                            <field name="prev_school" attrs="{'readonly': [('state', '=', 'done')]}"/>
                         </group>
                     </group>
                     <separator string="Personal Details"/>

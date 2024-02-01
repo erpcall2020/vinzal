@@ -173,9 +173,9 @@ class StudentApplication(models.Model):
                               help="Enter Middle name of Student")
     last_name = fields.Char(string='Last Name',
                             help="Enter Last name of Student")
-    # prev_school = fields.Many2one('education.institute',
-    #                               string='Previous Institution',
-    #                               help="Enter the name of previous institution")
+    prev_school = fields.Many2one('education.institute',
+                                  string='Previous Institution',
+                                  help="Enter the name of previous institution")
     image = fields.Binary(string='Image',
                           attachment=True,
                           help="Provide the image of the Student")
