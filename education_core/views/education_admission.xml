@@ -113,9 +113,9 @@
                         </group>
                         <group>
                             <field name="gender" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                            <!-- <field name="nationality" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                             <field name="nationality" attrs="{'readonly': [('state', '=', 'done')]}"/>
                              <field name="religion_id" attrs="{'readonly': [('state', '=', 'done')]}"/>
-                             <field name="caste_id" attrs="{'readonly': [('state', '=', 'done')]}"/>-->
+                             <field name="caste_id" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mother_name" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mother_qualification" attrs="{'readonly': [('state', '=', 'done')]}"/>
                             <field name="mother_occupation" attrs="{'readonly': [('state', '=', 'done')]}"/>
@@ -262,10 +262,10 @@
                             domain="[]" context="{'group_by': 'gender'}"/>
                     <filter string='Medium' name="medium"
                             domain="[]" context="{'group_by': 'medium'}"/>
-                    <!--                    <filter string='Religion' name="religion"-->
-                    <!--                            domain="[]" context="{'group_by': 'religion_id'}"/>-->
-                    <!--                    <filter string='Caste' name="caste"-->
-                    <!--                            domain="[]" context="{'group_by' : 'caste_id'}"/>-->
+                    <filter string='Religion' name="religion"
+                            domain="[]" context="{'group_by': 'religion_id'}"/>
+                    <filter string='Caste' name="caste"
+                            domain="[]" context="{'group_by' : 'caste_id'}"/>
                     <filter string='Mother Tongue' name="mother_tongue"
                             domain="[]" context="{'group_by': 'mother_tongue'}"/>
                 </group>

@@ -67,7 +67,7 @@ class StudentApplication(models.Model):
                 'gender': rec.gender,
                 'date_of_birth': rec.date_of_birth,
                 'blood_group': rec.blood_group,
-                # 'nationality': rec.nationality.id,
+                'nationality': rec.nationality.id,
                 'email': rec.email,
                 'mobile': rec.mobile,
                 'phone': rec.phone,
@@ -217,9 +217,9 @@ class StudentApplication(models.Model):
                         help="Enter Phone no. for contact purpose")
     mobile = fields.Char(string="Mobile", required=True,
                          help="Enter Mobile num for contact purpose")
-    # nationality = fields.Many2one('res.country', string='Nationality',
-    #                               ondelete='restrict',
-    #                               help="Select the Nationality")
+    nationality = fields.Many2one('res.country', string='Nationality',
+                                  ondelete='restrict',
+                                  help="Select the Nationality")
 
     street = fields.Char(string='Street', help="Enter the street")
     street2 = fields.Char(string='Street2', help="Enter the street2")
@@ -256,10 +256,10 @@ class StudentApplication(models.Model):
     description = fields.Text(string="Note")
     father_name = fields.Char(string="Father Name", help="Proud to say my father is")
     mother_name = fields.Char(string="Mother Name", help="My mother's name is")
-    # religion_id = fields.Many2one('religion.religion', string="Religion",
-    #                               help="My Religion is ")
-    # caste_id = fields.Many2one('religion.caste', string="Caste",
-    #                            help="My Caste is ")
+    religion_id = fields.Many2one('religion.religion', string="Religion",
+                                  help="My Religion is ")
+    caste_id = fields.Many2one('religion.caste', string="Caste",
+                               help="My Caste is ")
     class_id = fields.Many2one('education.class.division', string="Class")
     active = fields.Boolean(string='Active', default=True)
     document_count = fields.Integer(compute='_document_count',
