@@ -1,5 +1,3 @@
-
-
 from odoo import fields, models, api, _
 
 
@@ -49,6 +47,36 @@ class EducationStudent(models.Model):
         res = super(EducationStudent, self).create(vals)
         return res
 
+    # create invoice header action method
+    def action_create_invoice(self, rec=None):
+        invoice: object = self.env['account.move'].create({
+            'partner_id': self.student_user_id.partner_id.id,
+            'move_type': 'out_invoice',
+            'invoice_date': fields.Date.today(),
+        })
+        # You can also perform other actions related to the invoice creation here
+        return {
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'account.move',
+            'res_id': invoice.id,
+            'target': 'current',
+        }
+
+    # Here we are going to write action for view of total invoice
+    def action_view_partner_invoices(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Invoice',
+            'res_model': 'account.move',
+            'domain': [
+                ('partner_id', '=', self.student_user_id.partner_id.id),
+                ('move_type', 'in', ('out_invoice', 'out_refund'))
+            ],
+            'view_mode': 'tree,form',
+            'target': 'current',
+        }
+
     partner_id = fields.Many2one(
         'res.partner', string='Partner', required=True, ondelete="cascade")
     middle_name = fields.Char(string='Middle Name')
@@ -86,7 +114,7 @@ class EducationStudent(models.Model):
                                    ondelete='restrict')
     per_country_id = fields.Many2one('res.country', string='Country',
                                      ondelete='restrict')
-    medium = fields.Many2one('education.medium', string="Medium",)
+    medium = fields.Many2one('education.medium', string="Medium", )
     sec_lang = fields.Many2one('education.subject', string="Second language",
                                required=True,
                                domain=[('is_language', '=', True)])
