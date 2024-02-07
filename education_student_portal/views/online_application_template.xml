@@ -168,6 +168,24 @@
                                         </select>
                                     </div>
                                 </div>
+                                 <div class="col">
+                                        <label for="studio1">
+                                            <span class="s_website_form_label_content">
+                                                Second Language
+                                            </span>
+                                        </label>
+                                        <div class="col">
+                                            <select name="sec_lang"
+                                                    class="form-control">-->
+                                                <t t-foreach="sec_lang"
+                                                   t-as="rec">
+                                                    <option t-att-value="rec.id">
+                                                        <t t-esc="rec.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                    </div>
 
                             </div>
                             <div class="row">
