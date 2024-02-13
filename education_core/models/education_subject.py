@@ -80,7 +80,9 @@ class EducationSyllabus(models.Model):
     class_id = fields.Many2one('education.class', string='Class')
     subject_id = fields.Many2one('education.subject', string='Subject')
     total_hours = fields.Float(string='Total Hours')
-    description = fields.Text(string='Syllabus Activities')
+    oral_description = fields.Text(string='Oral Activities')
+    written_description = fields.Text(string='Written Activities')
+    description = fields.Text(string='Activities')
     month = fields.Selection([('janauary', 'Janauary'),
                                       ('feraurary', 'Febrauray'),
                                         ('march', 'March'),
@@ -105,10 +107,10 @@ class EducationSyllabus(models.Model):
                              ('saturday', 'Saturday')],
                             string='Day',
                             track_visibility='onchange')
-    type = fields.Selection([('oral', 'Oral'),
-                             ('written', 'Written')],
-                            string='Type',
-                            track_visibility='onchange')
+   # # type = fields.Selection([('oral', 'Oral'),
+   #                           ('written', 'Written')],
+   #                          string='Type',
+   #                          track_visibility='onchange')
 
     state = fields.Selection([('planned', 'Planned'), ('going_on', 'Going-on'), ('done', 'Done')],
                              string='State', required=True, default='planned',)

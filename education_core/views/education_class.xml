@@ -24,7 +24,7 @@
                 <notebook>
                         <page string="Syllabus">
                             <field name="syllabus_ids" nolabel="1">
-                                <tree string="Syllabus Items" editable="bottom">
+                                <tree string="Syllabus Items" editable="top">
                                     <field name="name"/>
                                     <field name="subject_id" required="1"/>
                                     <field name="total_hours"/>

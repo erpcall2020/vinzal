@@ -6,17 +6,20 @@
         <field name="model">education.syllabus</field>
         <field name="arch" type="xml">
             <tree string="Syllabus">
-                <field name="assign_date"/>
-                <field name="assignee_id"/>
-                <field name="name"/>
+<!--                <field name="assign_date"/>-->
+<!--                <field name="assignee_id"/>-->
+<!--                <field name="name"/>-->
                 <field name="class_id"/>
-                <field name="type"/>
-                <field name="subject_id"/>
-                <field name="total_hours"/>
-                <field name="description"/>
                 <field name="month"/>
                 <field name="week"/>
                 <field name="day"/>
+<!--                <field name="type"/>-->
+                <field name="subject_id"/>
+                <field name="total_hours"/>
+                <field name="oral_description"/>
+                <field name="written_description"/>
+                <field name="description"/>
+
                 <field name="state"/>
             </tree>
         </field>
@@ -35,10 +38,10 @@
                         <group>
                             <field name="name"/>
                             <field name="class_id" required="1"/>
-                            <field name="type"/>
+                            <field name="subject_id"/>
+<!--                            <field name="type"/>-->
                         </group>
                         <group>
-                            <field name="subject_id"/>
                             <field name="total_hours"/>
                             <field name="assignee_id"/>
                             <field name="assign_date"/>
@@ -48,6 +51,8 @@
                         <field name="month"/>
                         <field name="week"/>
                         <field name="day"/>
+                        <field name="oral_description"/>
+                        <field name="written_description"/>
                         <field name="description"/>
                     </group>
                 </sheet>
