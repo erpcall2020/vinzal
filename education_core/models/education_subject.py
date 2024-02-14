@@ -40,6 +40,7 @@ class EducationSubject(models.Model):
     weightage = fields.Float(string='Weightage', default=1.0,
                              help="Enter the weightage for this subject")
     description = fields.Text(string='Description')
+    active = fields.Boolean(default=True)
 
     _sql_constraints = [
         ('code', 'unique(code)',

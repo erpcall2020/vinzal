@@ -47,6 +47,7 @@
                 <field name="is_lab"/>
                 <field name="type"/>
                 <field name="weightage"/>
+                <filter string="Archived" name="active" domain="[('active', '=', False)]"/>
                 <filter string="Is Language" name="is_language" domain="[('is_language','=', True)]"/>
                 <filter string="Is Lab" name="is_lab" domain="[('is_lab','=', True)]"/>
 <!--                <group expand='0' string='Group by...'>-->
