@@ -84,8 +84,8 @@ class EducationSyllabus(models.Model):
     oral_description = fields.Text(string='Oral Activities')
     written_description = fields.Text(string='Written Activities')
     description = fields.Text(string='Activities')
-    month = fields.Selection([('janauary', 'Janauary'),
-                                      ('feraurary', 'Febrauray'),
+    month = fields.Selection([('january', 'January'),
+                                      ('february', 'February'),
                                         ('march', 'March'),
                                         ('afril', 'April'),
                               ('march', 'March'),
