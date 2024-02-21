@@ -168,24 +168,24 @@
                                         </select>
                                     </div>
                                 </div>
-                                 <div class="col">
-                                        <label for="studio1">
-                                            <span class="s_website_form_label_content">
-                                                Second Language
-                                            </span>
-                                        </label>
-                                        <div class="col">
-                                            <select name="sec_lang"
-                                                    class="form-control">-->
-                                                <t t-foreach="sec_lang"
-                                                   t-as="rec">
-                                                    <option t-att-value="rec.id">
-                                                        <t t-esc="rec.name"/>
-                                                    </option>
-                                                </t>
-                                            </select>
-                                        </div>
+                                <div class="col">
+                                    <label for="studio1">
+                                        <span class="s_website_form_label_content">
+                                            Second Language
+                                        </span>
+                                    </label>
+                                    <div class="col">
+                                        <select name="sec_lang"
+                                                class="form-control">-->
+                                            <t t-foreach="sec_lang"
+                                               t-as="rec">
+                                                <option t-att-value="rec.id">
+                                                    <t t-esc="rec.name"/>
+                                                </option>
+                                            </t>
+                                        </select>
                                     </div>
+                                </div>
 
                             </div>
                             <div class="row">
@@ -542,7 +542,7 @@
                                     </label>
                                     <div class="col">
                                         <input id="doc8" type="file"
-                                               name="doc8" required="1"/>
+                                               name="doc8"/>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -553,7 +553,7 @@
                                     </label>
                                     <div class="col">
                                         <input id="doc9" type="file"
-                                               name="doc9" required="1"/>
+                                               name="doc9"/>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -564,7 +564,7 @@
                                     </label>
                                     <div class="col">
                                         <input id="doc10" type="file"
-                                               name="doc10" required="1"/>
+                                               name="doc10"/>
                                     </div>
                                 </div>
                             </div>
@@ -572,10 +572,9 @@
                                 <label for="agree_to_terms">
                                     <input type="checkbox" name="agree_to_terms" id="agree_to_terms"
                                            required="required"/>
-                                    I agree to the terms and conditions
+                                           I agree to the <a href="/terms-and-condition" target="_blank">terms and conditions</a>
                                 </label>
                             </div>
-
                             <div class="form-group s_website_form_submit"
                                  data-name="Submit Button">
                                 <div style="width: 400px;"
