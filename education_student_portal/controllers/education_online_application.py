@@ -7,7 +7,7 @@ from odoo.http import request
 class OnlineAdmission(http.Controller):
     """Controller for taking online admission"""
 
-    @http.route('/online_admission', type='http', auth='public', website=True)
+    @http.route('/online_admission', type='http', auth='user', website=True)
     def online_admission(self):
         """To pass certain default field values to the website registration form."""
         vals = {
@@ -20,7 +20,7 @@ class OnlineAdmission(http.Controller):
         }
         return request.render('education_student_portal.online_admission', vals)
 
-    @http.route('/admission/submit', type='http', auth='public', website=True)
+    @http.route('/admission/submit', type='http', auth='user', website=True)
     def register_admission(self, **vals):
         """ This will create a new record with the values in the back end."""
         if vals:
