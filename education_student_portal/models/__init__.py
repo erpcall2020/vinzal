@@ -19,6 +19,6 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 ################################################################################
-from . import education_application
+# from . import education_application
 from . import education_student
 from . import education_document

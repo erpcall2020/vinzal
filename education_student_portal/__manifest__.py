@@ -32,10 +32,10 @@
     'depends': ['base', 'education_core', 'website', 'auth_signup'],
     'data': [
         'security/ir.model.access.csv',
-        'data/student_mail_template.xml',
+      #  'data/student_mail_template.xml',
         'data/online_application_menu.xml',
         'views/education_student_views.xml',
-        'views/student_portal_template.xml',
+       # 'views/student_portal_template.xml',
         'views/online_application_template.xml',
     ],
     'images': ['static/description/banner.jpg'],
