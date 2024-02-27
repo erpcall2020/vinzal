@@ -10,8 +10,8 @@
     'depends': ['base'],
     'data': [
         'security/visitors_security.xml',
-        'views/visitors_register.xml',
         'security/ir.model.access.csv',
+        'views/visitors_register.xml',
     ],
     'demo': [
 

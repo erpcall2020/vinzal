@@ -49,7 +49,7 @@
     <menuitem id="visitors_register_root_menu"
               name="Visitors"
               web_icon="contacts,static/description/icon.svg"
-              groups="base.group_system"
+              groups="visitors_register.group_crm_visitor"
               sequence="0"/>
 
     <menuitem id="visitors_register_main_menu"
