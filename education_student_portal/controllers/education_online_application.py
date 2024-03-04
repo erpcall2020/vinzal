@@ -30,8 +30,8 @@ class OnlineAdmission(http.Controller):
             })
             application = request.env['education.application'].sudo().create({
                 'name': vals.get('first_name'),
-                'middle_name': vals.get('middle_name'),
-                'last_name': vals.get('last_name'),
+                # 'middle_name': vals.get('middle_name'),
+                # 'last_name': vals.get('last_name'),
                 'mother_name': vals.get('mother'),
                 'father_name': vals.get('father'),
                 'mobile': vals.get('phone'),

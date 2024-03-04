@@ -50,7 +50,7 @@
                                 <div class="col">
                                     <label for="studio1">
                                         <span class="s_website_form_label_content">
-                                            First Name
+                                            Full Name
                                         </span>
                                     </label>
                                     <div class="col">
@@ -60,7 +60,7 @@
                                                required="1"/>
                                     </div>
                                 </div>
-                                <div class="col">
+                                <!--<div class="col">
                                     <label for="studio1">
                                         <span class="s_website_form_label_content">
                                             Middle Name
@@ -85,7 +85,7 @@
                                                name="last_name"
                                                required="1"/>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                             <div class="row">
                                 <div class="col">

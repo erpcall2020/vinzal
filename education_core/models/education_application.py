@@ -45,8 +45,8 @@ class StudentApplication(models.Model):
             print('self===', rec)
             values = {
                 'name': rec.name,
-                'last_name': rec.last_name,
-                'middle_name': rec.middle_name,
+                # 'last_name': rec.last_name,
+                # 'middle_name': rec.middle_name,
                 'application_id': rec.id,
                 'father_name': rec.father_name,
                 'mother_name': rec.mother_name,
@@ -168,11 +168,11 @@ class StudentApplication(models.Model):
             })
 
     name = fields.Char(string='Name', required=True,
-                       help="Enter First name of Student")
-    middle_name = fields.Char(string='Middle Name',
-                              help="Enter Middle name of Student")
-    last_name = fields.Char(string='Last Name',
-                            help="Enter Last name of Student")
+                       help="Enter Full name of Student")
+    # middle_name = fields.Char(string='Middle Name',
+    #                           help="Enter Middle name of Student")
+    # last_name = fields.Char(string='Last Name',
+    #                         help="Enter Last name of Student")
     prev_school = fields.Many2one('education.institute',
                                   string='Previous Institution',
                                   help="Enter the name of previous institution")

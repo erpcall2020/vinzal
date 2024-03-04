@@ -8,7 +8,7 @@
             <tree string="Student Application">
                 <field name="application_no"/>
                 <field name="name"/>
-                <field name="last_name"/>
+<!--                <field name="last_name"/>-->
                 <field name="gender"/>
                 <field name="date_of_birth"/>
                 <field name="date_of_birth_words"/>
@@ -68,17 +68,17 @@
                             <table>
                                 <tr>
                                     <td style="padding-right:10px;">
-                                        <field name="name" placeholder="First Name" required="1"
+                                        <field name="name" placeholder="Full Name" required="1"
                                                attrs="{'readonly': [('state', '=', 'done')]}"/>
                                     </td>
-                                    <td style="padding-right:10px;">
+                                    <!--<td style="padding-right:10px;">
                                         <field name="middle_name" placeholder="Middle Name"
                                                attrs="{'readonly': [('state', '=', 'done')]}"/>
                                     </td>
                                     <td style="padding-right:10px;">
                                         <field name="last_name" placeholder="Last Name" required="1"
                                                attrs="{'readonly': [('state', '=', 'done')]}"/>
-                                    </td>
+                                    </td>-->
                                 </tr>
                             </table>
                         </h1>
