@@ -34,6 +34,8 @@
         'security/education_security.xml',
         'security/ir.model.access.csv',
         'data/action_admission.xml',
+        'data/mail_template_data.xml',
+        'data/fee_mail_template.xml',
         'views/education_main_menu.xml',
         'views/education_res_partner.xml',
         'views/education_application_reject.xml',

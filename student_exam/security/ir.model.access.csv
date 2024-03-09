@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_op_exam,op.exam,model_op_exam,base.group_user,1,1,1,1
+access_op_exam_line,op.exam.line,model_op_exam_line,base.group_user,1,1,1,1
+access_op_person_line,op.person.line,model_op_person_line,base.group_user,1,1,1,1

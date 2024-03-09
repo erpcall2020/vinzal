@@ -38,6 +38,10 @@
                             type="object" class="oe_highlight"
                             help="Click to create Student"
                             states="approve"/>
+                    <button name="action_fee_send_mail" string="Send Fee Details"
+                            type="object" class="oe_highlight"
+                            help="Click to create send fee details"
+                            states="approve"/>
                     <button name="%(education_core.application_reject_action)d" string="Reject"
                             type="action"
                             context="{'default_application_id': active_id}"

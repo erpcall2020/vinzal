@@ -37,6 +37,11 @@ class StudentApplication(models.Model):
                 'state': 'verification'
             })
 
+    def action_fee_send_mail(self):
+        template = self.env.ref('education_core.student_fee_mail_template')
+        for rec in self:
+            template.send_mail(rec.id, force_send=True)
+
     def create_student(self):
         """Create student from the application
             and data and return the student"""

@@ -62,6 +62,11 @@ class EducationStudent(models.Model):
             'res_id': invoice.id,
             'target': 'current',
         }
+    def action_send_email(self):
+        template = self.env.ref('education_core.student_mail_template')
+        for rec in self:
+            template.send_mail(rec.id, force_send=True)
+
 
     # Here we are going to write action for view of total invoice
     def action_view_partner_invoices(self):
