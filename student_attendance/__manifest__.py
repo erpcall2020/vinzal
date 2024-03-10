@@ -9,9 +9,8 @@
     'website': "http://www.erpcall.com",
     'depends': ['base','hr'],
     'data': [
-       # 'security/student_exam.xml',
         'security/ir.model.access.csv',
-        'views/student_exam.xml',
+        'views/student_attendance.xml',
     ],
     'demo': [
 
