@@ -67,7 +67,7 @@
     <menuitem id="inquiry_register_root_menu"
               name="Inquiry register"
               web_icon="contacts,static/description/icon.svg"
-              groups="base.group_system"
+              groups="base.group_user"
               sequence="0"/>
 
     <menuitem id="inquiry_register_main_menu"

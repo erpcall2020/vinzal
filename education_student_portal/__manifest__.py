@@ -32,8 +32,9 @@
     'depends': ['base', 'education_core', 'website', 'auth_signup'],
     'data': [
         'security/ir.model.access.csv',
+        'security/online_admission_security.xml',
       #  'data/student_mail_template.xml',
-        'data/online_application_menu.xml',
+      #  'data/online_application_menu.xml',
         'views/education_student_views.xml',
        # 'views/student_portal_template.xml',
         'views/online_application_template.xml',
