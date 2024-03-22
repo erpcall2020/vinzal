@@ -46,8 +46,6 @@ class StudentApplication(models.Model):
         """Create student from the application
             and data and return the student"""
         for rec in self:
-            print('self===', self)
-            print('self===', rec)
             values = {
                 'name': rec.name,
                 # 'last_name': rec.last_name,
@@ -102,6 +100,10 @@ class StudentApplication(models.Model):
             rec.write({
                 'state': 'done'
             })
+            if student.partner_id:
+               student.partner_id.date_of_birth = student.date_of_birth 
+               student.partner_id.roll_number = student.ad_no
+
             return {
                 'name': _('Student'),
                 'view_mode': 'form',
@@ -301,4 +303,3 @@ class StudentApplication(models.Model):
     mother_occupation = fields.Char(string="Mother Occupation")
     mother_income = fields.Char(string="Mother Income")
     sssmid = fields.Char(string="SSSMID")
-

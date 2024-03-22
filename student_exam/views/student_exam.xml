@@ -13,7 +13,7 @@
                     <field name="end_time"/>
                     <field name="note" optional="hide"/>
                     <field name="total_marks" optional="show"/>
-                    <field name="min_marks" optional="show"/>
+                    <!-- <field name="min_marks" optional="show"/>-->
                 </tree>
             </field>
         </record>
@@ -31,13 +31,16 @@
                                 <field name="partner_id"/>
                                 <field name="partner_phone_number"/>
                                 <field name="partner_address"/>
+                                <field name="date_of_birth"/>
+                                <field name="roll_number"/>
                             </group>
                             <group>
                                 <field name="total_marks"/>
-                                <field name="min_marks"/>
+                                <!--<field name="min_marks"/>-->
                                 <field name="start_time"/>
                                 <field name="end_time"/>
                                 <field name="note"/>
+                                <field name="attaudence"/>
                             </group>
                         </group>
 
@@ -46,6 +49,7 @@
                                 <field name="exam_line_ids" widget="one2many_list">
                                     <tree editable="bottom">
                                         <field name="subject_id"/>
+                                        <field name="min_marks"/>
                                         <field name="marks_obtained"/>
                                         <field name="grade"/>
                                     </tree>
@@ -56,7 +60,9 @@
                             <page string="Personality Development">
                                 <field name="personality_line_ids" widget="one2many_list">
                                     <tree editable="bottom">
-                                        <field name="points"/>
+                                        <field name="points1"/>
+                                        <field name="grade"/>
+                                        <field name="points2"/>
                                         <field name="grade"/>
                                     </tree>
                                 </field>
@@ -71,6 +77,17 @@
             </field>
         </record>
 
+        <!--<record id="view_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="function" position="after">
+                    <field name="date_of_birth"/>
+                </field>
+            </field>
+        </record>-->
+
         <!-- Menu creation and action defined -->
         <record id="student_exam_action" model="ir.actions.act_window">
             <field name="name">Student Exam</field>
@@ -81,7 +98,7 @@
         <menuitem id="student_exam_root_menu"
                   name="Student Exam"
                   web_icon="contacts,static/description/icon.svg"
-                  groups="base.group_system"
+                  groups="base.group_user"
                   sequence="0"/>
 
         <menuitem id="student_exam_main_menu"

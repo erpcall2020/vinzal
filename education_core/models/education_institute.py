@@ -57,6 +57,8 @@ class EducationResPartner(models.Model):
 
     is_student = fields.Boolean(string="Is a Student")
     is_parent = fields.Boolean(string="Is a Parent")
+    date_of_birth = fields.Date(string="Date of Birth")
+    roll_number = fields.Char(string="Roll Number")
 
 
 class ReligionReligion(models.Model):

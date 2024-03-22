@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_education_syllabus_tree" model="ir.ui.view">
+        <field name="name">education.syllabus.tree</field>
+        <field name="model">education.syllabus</field>
+        <field name="arch" type="xml">
+            <tree string="Syllabus">
+<!--                <field name="assign_date"/>-->
+<!--                <field name="assignee_id"/>-->
+<!--                <field name="name"/>-->
+                <field name="class_id"/>
+                <field name="month"/>
+                <field name="week"/>
+                <field name="day"/>
+<!--                <field name="type"/>-->
+                <field name="subject_id"/>
+                <field name="total_hours"/>
+                <field name="oral_description"/>
+                <field name="written_description"/>
+                <field name="description"/>
+
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_education_syllabus_form" model="ir.ui.view">
+        <field name="name">education.syllabus.form</field>
+        <field name="model">education.syllabus</field>
+        <field name="arch" type="xml">
+            <form string="Syllabus">
+                <header>
+                     <field name="state" widget="statusbar" options="{'clickable': '1', 'fold_field': 'fold'}"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="class_id" required="1"/>
+                            <field name="subject_id"/>
+<!--                            <field name="type"/>-->
+                        </group>
+                        <group>
+                            <field name="total_hours"/>
+                            <field name="assignee_id"/>
+                            <field name="assign_date"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="month"/>
+                        <field name="week"/>
+                        <field name="day"/>
+                        <field name="oral_description"/>
+                        <field name="written_description"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_education_syllabus" model="ir.actions.act_window">
+        <field name="name">Syllabus</field>
+        <field name="res_model">education.syllabus</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create the your first syllabus here.
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="action_education_syllabus" parent="menu_education_class_conf"
+              id="menu_action_education_syllabus" sequence="5"/>
+
+</odoo>

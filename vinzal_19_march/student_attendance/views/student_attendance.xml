@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+
+   <record id="view_student_attendance_tree" model="ir.ui.view">
+        <field name="name">student.attendance</field>
+        <field name="model">student.attendance</field>
+        <field name="arch" type="xml">
+            <tree string="Student Attendance" editable="top">
+                <field name="partner_id" string="Student"/>
+                <field name="create_date" string="Check-In"/>
+                <field name="check_out" string="Check-Out"/>
+            </tree>
+        </field>
+    </record>
+
+
+        <record id="student_attendance_action" model="ir.actions.act_window">
+            <field name="name">Student Attendance</field>
+            <field name="res_model">student.attendance</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem id="hr_attendance_main_menu"
+                  name="Student"
+                  parent="hr_attendance.menu_hr_attendance_root"
+                  action="student_attendance_action"
+                  sequence="6"/>
+    </data>
+</odoo>

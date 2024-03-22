@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_online_admission" model="res.groups">
+        <field name="name">Online Admission</field>
+    </record>
+
+</odoo>
