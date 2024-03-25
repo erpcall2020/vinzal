@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-
-    <record id="group_crm_visitor" model="res.groups">
-        <field name="name">Visitors</field>
-    </record>
-
-</odoo>

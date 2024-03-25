@@ -39,8 +39,23 @@ class StudentApplication(models.Model):
 
     def action_fee_send_mail(self):
         template = self.env.ref('education_core.student_fee_mail_template')
-        for rec in self:
-            template.send_mail(rec.id, force_send=True)
+        ctx = {
+            'default_model': self._name,
+            'default_res_id': self.id,
+            'default_use_template': bool(template),
+            'default_template_id': template.id,
+            'default_composition_mode': 'comment',
+            'mark_so_as_sent': True,
+            'force_email': True,
+        }
+        return {
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'mail.compose.message',
+            'views': [(False, 'form')],
+            'target': 'new',
+            'context': ctx,
+        }
 
     def create_student(self):
         """Create student from the application

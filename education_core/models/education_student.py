@@ -62,10 +62,26 @@ class EducationStudent(models.Model):
             'res_id': invoice.id,
             'target': 'current',
         }
+
     def action_send_email(self):
         template = self.env.ref('education_core.student_mail_template')
-        for rec in self:
-            template.send_mail(rec.id, force_send=True)
+        ctx = {
+            'default_model': self._name,
+            'default_res_id': self.id,
+            'default_use_template': bool(template),
+            'default_template_id': template.id,
+            'default_composition_mode': 'comment',
+            'mark_so_as_sent': True,
+            'force_email': True,
+        }
+        return {
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'mail.compose.message',
+            'views': [(False, 'form')],
+            'target': 'new',
+            'context': ctx,
+        }
 
 
     # Here we are going to write action for view of total invoice
