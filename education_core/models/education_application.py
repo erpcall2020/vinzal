@@ -1,4 +1,3 @@
-
 from odoo import fields, models, _, api
 from odoo.exceptions import ValidationError
 
@@ -39,23 +38,26 @@ class StudentApplication(models.Model):
 
     def action_fee_send_mail(self):
         template = self.env.ref('education_core.student_fee_mail_template')
-        ctx = {
-            'default_model': self._name,
-            'default_res_id': self.id,
-            'default_use_template': bool(template),
-            'default_template_id': template.id,
-            'default_composition_mode': 'comment',
-            'mark_so_as_sent': True,
-            'force_email': True,
-        }
-        return {
-            'type': 'ir.actions.act_window',
-            'view_mode': 'form',
-            'res_model': 'mail.compose.message',
-            'views': [(False, 'form')],
-            'target': 'new',
-            'context': ctx,
-        }
+        if template:
+            ctx = {
+                'default_model': self._name,
+                'default_res_id': self.id,
+                'default_use_template': bool(template),
+                'default_template_id': template.id,
+                'default_composition_mode': 'comment',
+                'mark_so_as_sent': True,
+                'force_email': True,
+            }
+            return {
+                'type': 'ir.actions.act_window',
+                'view_mode': 'form',
+                'res_model': 'mail.compose.message',
+                'views': [(False, 'form')],
+                'target': 'new',
+                'context': ctx,
+            }
+        else:
+            raise UserError("Email template not found. Please configure the template.")
 
     def create_student(self):
         """Create student from the application
@@ -116,8 +118,8 @@ class StudentApplication(models.Model):
                 'state': 'done'
             })
             if student.partner_id:
-               student.partner_id.date_of_birth = student.date_of_birth 
-               student.partner_id.roll_number = student.ad_no
+                student.partner_id.date_of_birth = student.date_of_birth
+                student.partner_id.roll_number = student.ad_no
 
             return {
                 'name': _('Student'),
@@ -237,6 +239,16 @@ class StudentApplication(models.Model):
                         help="Enter E-mail id for contact purpose")
     phone = fields.Char(string="Phone",
                         help="Enter Phone no. for contact purpose")
+    mother_mobile = fields.Char(string="Mother Mobile", required=True,
+                                help="Enter Mobile num for contact purpose")
+    guardian_mobile = fields.Char(string="Guardian’s Mobile", required=True,
+                                  help="Enter Mobile num for contact purpose")
+    # terms_condition = fields.Char(string="Terms and Condition",
+    #                               help="Admission Terms and Condition")
+    terms_condition = fields.Text(string="Fee Terms and Conditions",
+                                  default="1. Parental Responsibility: Parents are responsible for ensuring the safety and security of their children outside of school premises. School will not be responsible for unattended kids outside of school premises.\n\n2. Fee Payment: Parents must promptly deposit all fees and fines. Failure to meet deadlines may result in penalties or termination of student enrollment.\n\n3. Hygiene Standards: The school reserves the right to refuse admission to children with unsatisfactory hygiene conditions, prioritizing the safety of all students and staff.\n\n4. Safety Disclaimer: While the school takes precautions for the safety, security, and hygiene of students, it shall not be held liable for accidents, health issues, or injuries resulting from unforeseen circumstances.\n\n5. Terms and Conditions Updates: The school reserves the right to update its terms and conditions periodically and may terminate a student's enrollment at its discretion.\n\n6. Food Distribution: Only school staff are permitted to distribute edible items to students.\n\n7. Attendance and Discipline: Parents are responsible for ensuring their children's regularity, punctuality, and discipline within the school.\n\n8. Authorized Pickups: Parents should only authorize known individuals to pick up their child from the school premises.\n\n9. Timeliness: Students must arrive at school by 9:50 am for the 10:00 am assembly. Entry and exit will be permitted only through valid ID cards. Parents are requested to not leave their kids unattended.\n\n10. Refund Policy: School fees once paid are non-refundable, and late payments may incur additional charges.\n\n11. Behavioral Expectations: Students are expected to behave courteously and respectfully towards school authorities and staff, and to take care of school property.\n\n12. Absence Notification: In case of absence, parents must inform the Principal in advance and submit a leave application.\n\n13. Prohibited Items: Electronic gadgets and valuable articles are prohibited on school premises.\n\n14. Emergency Protocol: While the school maintains a first aid kit, parents will be immediately notified in the event of injury or illness, and are expected to pick up their child promptly.")
+    signature = fields.Binary(string="Digital Signature")
+
     mobile = fields.Char(string="Mobile", required=True,
                          help="Enter Mobile num for contact purpose")
     nationality = fields.Many2one('res.country', string='Nationality',
