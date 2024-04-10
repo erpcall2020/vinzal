@@ -15,9 +15,9 @@
                             <div class="row">
                                 <center>
                                     <div class="col-xs-8" style="margin:auto">
-                                        <table border='1' class="table table-condensed" style="border: 3px solid black !important;width:55%;">
+                                        <table border='0' class="table table-condensed" style="border: 3px solid black !important;width:55%;">
                                             <tr>
-                                                <td width="1%">
+                                                <td style="padding-left:15px;" width="1%">
                                                     <p style="text-align:center;padding-top:10px;">
                                                         <img t-if="not o.image_1920" t-att-src="'/web/static/src/img/placeholder.png'" height="120"  width="120"/>
 <!--                                                        <img t-if="o.image_1920" t-att-src="'data:image/png;base64,%s' % to_text(o.image_1920)" height="120" border="1" width="120"/>-->
@@ -27,26 +27,73 @@
                                                         <strong><span t-field="o.name"/></strong>
                                                     </p>
                                                 </td>
-                                                <td width="63%">
-                                                    <table border='1' style="width:55%;">
+                                                <td style="padding-left:60px;" width="70%">
+                                                    <table border='0' style="width:100%;">
                                                         <tr>
                                                             <td>
-                                                                <p style="text-align:right;padding-top:30px;"><strong>Ad No : </strong></p>
-                                                                <p style="text-align:right;"><strong>Class : </strong></p>
-                                                                <p style="text-align:right;"><strong>Contact : </strong></p>
-                                                                <p style="text-align:right;"><strong>Sex : </strong></p>
+                                                                <p style="text-align:left;padding-top:30px;"><strong>Roll No : </strong></p>
+                                                                <p style="text-align:left;"><strong>Class : </strong></p>
+                                                                <p style="text-align:left;"><strong>Contact : </strong></p>
+                                                                <p style="text-align:left;"><strong>Sex : </strong></p>
+                                                                <p style="text-align:left;"><strong>Address : </strong></p>
                                                             </td>
                                                             <td >
                                                                 <p style="text-align:left;padding-top:30px;padding-left:10px;"  t-field="o.ad_no"/>
                                                                 <p style="text-align:left;padding-left:10px;" t-field="o.class_id.name"/>
                                                                 <p style="text-align:left;padding-left:10px;" t-field="o.mobile"/>
                                                                 <p style="text-align:left;padding-left:10px;" t-field="o.gender"/>
+                                                                <p style="text-align:left;padding-left:10px;" t-field="o.street"/>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+<!--                                        </table>-->
+
+<!--                                        <table border='1' class="table table-condensed" style="border: 3px solid black !important;width:55%;">-->
+                                            <tr>
+                                                <td style="padding-left:15px;" width="1%">
+                                                    <div>
+                                                        <p>
+<!--                                                        <img t-if="o.company_id.logo" t-att-src="'/web/static/src/img/placeholder.png'" height="120"  width="120"/>-->
+<!--                                                        <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" height="120"  width="120"/>-->
+
+<!--                                                        <img t-if="o.image_1920" t-att-src="'data:image/png;base64,%s' % to_text(o.image_1920)" height="120" border="1" width="120"/>-->
+                                                        <img t-if="o.father_image" t-attf-src="data:image/png;base64,{{o.father_image}}" height="120" border="1" width="120" />
+                                                    </p>
+                                                        <p style="text-align:center;">
+                                                        <strong><span t-field="o.father_name"/></strong>
+                                                    </p>
+                                                    </div>
+
+<!--                                                    <p style="text-align:center;">-->
+<!--                                                        <strong><span t-field="o.name"/></strong>-->
+<!--                                                    </p>-->
+                                                </td>
+                                                <td style="padding-left:40px;" width="70%">
+                                                    <table border='0.5' style="width:100%;">
+                                                        <tr>
+                                                            <!--<td>
+                                                                <p style="text-align:left;padding-left:30px;"><strong>Company Name : </strong></p>
+                                                                <p style="text-align:left;padding-left:30px;"><strong>Address : </strong></p>
+
+                                                            </td>-->
+                                                            <td style="padding-left:60px;">
+                                                                 <img t-if="o.company_id.logo" t-attf-src="data:image/png;base64,{{o.company_id.logo}}" height="120" border="1" width="220" style="padding-left:25px"/>
+                                                                <p style="text-align:left;padding-right:30px;"><span t-field="o.company_id.name" style="font-weight: bold;"/></p>
+                                                                <p style="text-align:left;padding-right:30px;"><span t-field="o.company_id.street"/> <span t-field="o.company_id.city"/></p>
+<!--                                                                <p style="text-align:left;padding-right:30px;"  t-field="o.company_id.zip"/>
+                                                                <p style="text-align:left;padding-right:30px;"  t-field="o.company_id.state_id" />-->
+                                                                 <p style="text-align:left;padding-right:30px;"><span t-field="o.company_id.state_id"/> <span t-field="o.company_id.zip"/></p>
+                                                                <p style="text-align:left;padding-right:30px;"  t-field="o.company_id.country_id"/>
                                                             </td>
                                                         </tr>
                                                     </table>
                                                 </td>
                                             </tr>
                                         </table>
+
+
                                     </div>
                                 </center>
                             </div>

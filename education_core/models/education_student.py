@@ -151,6 +151,7 @@ class EducationStudent(models.Model):
                                      string="Application No")
     class_history_ids = fields.One2many('education.class.history', 'student_id',
                                         string="Application No")
+    father_image = fields.Binary()
 
     _sql_constraints = [
         ('ad_no', 'unique(ad_no)',
