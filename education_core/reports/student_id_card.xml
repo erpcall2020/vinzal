@@ -65,27 +65,15 @@
                                                         <strong><span t-field="o.father_name"/></strong>
                                                     </p>
                                                     </div>
-
-<!--                                                    <p style="text-align:center;">-->
-<!--                                                        <strong><span t-field="o.name"/></strong>-->
-<!--                                                    </p>-->
                                                 </td>
                                                 <td style="padding-left:40px;" width="70%">
                                                     <table border='0.5' style="width:100%;">
                                                         <tr>
-                                                            <!--<td>
-                                                                <p style="text-align:left;padding-left:30px;"><strong>Company Name : </strong></p>
-                                                                <p style="text-align:left;padding-left:30px;"><strong>Address : </strong></p>
-
-                                                            </td>-->
-                                                            <td style="padding-left:60px;">
-                                                                 <img t-if="o.company_id.logo" t-attf-src="data:image/png;base64,{{o.company_id.logo}}" height="120" border="1" width="220" style="padding-left:25px"/>
+                                                            <td style="padding-left:50px;">
+                                                                <img t-if="o.company_id.logo" t-attf-src="data:image/png;base64,{{o.company_id.logo}}" height="120" border="1" width="220" style="padding-left:25px"/>
                                                                 <p style="text-align:left;padding-right:30px;"><span t-field="o.company_id.name" style="font-weight: bold;"/></p>
-                                                                <p style="text-align:left;padding-right:30px;"><span t-field="o.company_id.street"/> <span t-field="o.company_id.city"/></p>
-<!--                                                                <p style="text-align:left;padding-right:30px;"  t-field="o.company_id.zip"/>
-                                                                <p style="text-align:left;padding-right:30px;"  t-field="o.company_id.state_id" />-->
-                                                                 <p style="text-align:left;padding-right:30px;"><span t-field="o.company_id.state_id"/> <span t-field="o.company_id.zip"/></p>
-                                                                <p style="text-align:left;padding-right:30px;"  t-field="o.company_id.country_id"/>
+                                                                <p style="text-align:left;padding-right:30px;"><span t-field="o.company_id.street"/> <span t-field="o.company_id.city"/></p> <span t-field="o.company_id.state_id"/>
+                                                                <p style="text-align:left;padding-right:30px;"> <span t-field="o.company_id.zip"/> <span t-field="o.company_id.country_id"/></p>
                                                             </td>
                                                         </tr>
                                                     </table>
