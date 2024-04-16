@@ -113,7 +113,9 @@ class EducationSyllabus(models.Model):
                              ('3rd', '3rd'),
                              ('4th', '4th'),
                              ('5th', '5th'),
-                             ('6th', '6th')],
+                             ('6th', '6th'),
+                             ('7th', '7th'),
+                             ('8th', '8th')],
                             string='Period',
                             track_visibility='onchange')
     time = fields.Selection([('10:00 to 10:15', '10:00 TO 10:15'),
@@ -122,7 +124,9 @@ class EducationSyllabus(models.Model):
                              ('11:00 to 11:30', '11:00 TO 11:30'),
                              ('11:30 to 12:00', '11:30 TO 12:00'),
                              ('12:00 to 12:30', '12:00 TO 12:30'),
-                             ('12:30 to 1:00', '12:30 TO 1:00')],
+                             ('12:30 to 01:00', '12:30 TO 01:00'),
+                             ('01:00 to 01:30', '01:00 TO 01:30'),
+                             ('01:30 to 02:00', '01:30 TO 02:00')],
                             string='Time',
                             track_visibility='onchange')
    # # type = fields.Selection([('oral', 'Oral'),

@@ -12,12 +12,12 @@ class OpExam(models.Model):
     #  partner_id = fields.Many2one('education.student', string='Student')
     #  date_of_birth = fields.Date(related='partner_id.date_of_birth', string='Date of Birth', store=True)
 
-    start_time = fields.Datetime(string='Start Time', required=True)
-    end_time = fields.Datetime(string='End Time', required=True)
+    #start_time = fields.Datetime(string='Start Time', required=True)
+   # end_time = fields.Datetime(string='End Time', required=True)
     note = fields.Text(string='Remarks')
-    attaudence = fields.Char(string='Attaudence')
-    total_marks = fields.Integer(string='Total Marks', required=True)
-    #  min_marks = fields.Integer(string='Passing Marks', required=True)
+    attendance = fields.Char(string='Attendance')
+    #total_marks = fields.Integer(string='Total Marks', required=True)
+   # max_marks = fields.Integer(string='Maximum Marks', required=True)
     active = fields.Boolean(default=True)
     partner_id = fields.Many2one(
         'res.partner',
@@ -32,7 +32,7 @@ class OpExam(models.Model):
     partner_phone_number = fields.Char(related='partner_id.mobile', string='Phone Number', readonly=True)
     roll_number = fields.Char(related='partner_id.roll_number', string='Roll Number', readonly=True)
     partner_address = fields.Char(related='partner_id.street', string='Address', readonly=True)
-    #  partner_guardian_name = fields.Char(related='partner_id.guardian_name', string='Father Name', readonly=True)
+    #partner_guardian_name = fields.Char(related='partner_id.guardian_name', string='Father Name', readonly=True)
     subject_id = fields.Many2one('education.subject', string='Subject')
     marks_obtained = fields.Char(string="Marks Obtained")
     grade = fields.Char(string="Grade")
@@ -60,14 +60,20 @@ class OpExamLine(models.Model):
                               ('e', 'E')],
                              string='Grade',
                              track_visibility='onchange')
-    min_marks = fields.Integer(string='Passing Marks', required=True)
+    max_marks = fields.Integer(string='Maximum Marks', required=True)
 
     class OpPersonalityExamLine(models.Model):
         _name = 'op.person.line'
         _description = 'Exam Line'
 
         personality_id = fields.Many2one('op.exam', string='Personality development')
-        grade = fields.Selection([('a', 'A'),
+        grade_1 = fields.Selection([('a', 'A'),
+                                  ('b', 'B'),
+                                  ('c', 'C'), ('d', 'D'),
+                                  ('e', 'E')],
+                                 string='Grade',
+                                 track_visibility='onchange')
+        grade_2 = fields.Selection([('a', 'A'),
                                   ('b', 'B'),
                                   ('c', 'C'), ('d', 'D'),
                                   ('e', 'E')],
@@ -87,6 +93,6 @@ class OpExamLine(models.Model):
             ('cleanliness', 'Cleanliness'),
             ('punctuality', 'Punctuality'),
             ('neatness_in_work', 'Neatness in Work'),
-            ('a_hentine', 'A Hentine'),
+            ('focus', 'Focus'),
             ('cooperative', 'Cooperative'),
         ], string='Points 2', track_visibility='onchange')

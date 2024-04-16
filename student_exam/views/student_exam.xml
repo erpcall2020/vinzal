@@ -9,10 +9,10 @@
                 <tree string="Exam">
                     <field name="student_class"/>
                     <field name="partner_id"/>
-                    <field name="start_time"/>
-                    <field name="end_time"/>
+<!--                    <field name="start_time"/>-->
+<!--                    <field name="end_time"/>-->
                     <field name="note" optional="hide"/>
-                    <field name="total_marks" optional="show"/>
+<!--                    <field name="total_marks" optional="show"/>-->
                     <!-- <field name="min_marks" optional="show"/>-->
                 </tree>
             </field>
@@ -33,14 +33,15 @@
                                 <field name="partner_address"/>
                                 <field name="date_of_birth"/>
                                 <field name="roll_number"/>
+                                <!--<field name="partner_guardian_name"/>-->
                             </group>
                             <group>
-                                <field name="total_marks"/>
+<!--                                <field name="total_marks"/>-->
                                 <!--<field name="min_marks"/>-->
-                                <field name="start_time"/>
-                                <field name="end_time"/>
+<!--                                <field name="start_time"/>-->
+<!--                                <field name="end_time"/>-->
                                 <field name="note"/>
-                                <field name="attaudence"/>
+                                <field name="attendance"/>
                             </group>
                         </group>
 
@@ -49,7 +50,7 @@
                                 <field name="exam_line_ids" widget="one2many_list">
                                     <tree editable="bottom">
                                         <field name="subject_id"/>
-                                        <field name="min_marks"/>
+                                        <field name="max_marks"/>
                                         <field name="marks_obtained"/>
                                         <field name="grade"/>
                                     </tree>
@@ -61,9 +62,9 @@
                                 <field name="personality_line_ids" widget="one2many_list">
                                     <tree editable="bottom">
                                         <field name="points1"/>
-                                        <field name="grade"/>
+                                        <field name="grade_1"/>
                                         <field name="points2"/>
-                                        <field name="grade"/>
+                                        <field name="grade_2"/>
                                     </tree>
                                 </field>
                             </page>

@@ -50,13 +50,13 @@
                                                 <p style="margin:0px; border-style: none" t-if="o.partner_address"
                                                    t-field="o.partner_address"/>
                                             </td>
-                                            <th style="border-style: none; margin: 0px">
+                                            <!--<th style="border-style: none; margin: 0px">
                                                 <strong>Total Marks:</strong>
                                             </th>
                                             <td style="border-style: none; margin: 0px">
                                                 <p style="margin:0px; border-style: none" t-if="o.total_marks"
                                                    t-field="o.total_marks"/>
-                                            </td>
+                                            </td>-->
                                             <th style="border-style: none; margin: 0px">
                                                 <strong>Date of Birth:</strong>
                                             </th>
@@ -81,8 +81,8 @@
                                                     <th style="margin:0px; border-style: none" name="th_subject_id"
                                                         class="text-center">Subject
                                                     </th>
-                                                    <th style="margin:0px; border-style: none" name="th_min_marks"
-                                                        class="text-center">Passing Marks
+                                                    <th style="margin:0px; border-style: none" name="th_max_marks"
+                                                        class="text-center">Maximum Marks
                                                     </th>
                                                     <th style="margin:0px; border-style: none" name="th_marks_obtained"
                                                         class="text-center">Marks Obtained
@@ -95,7 +95,7 @@
                                             <t t-foreach="o.exam_line_ids" t-as="line">
                                                 <tr style="margin:0px; border-style: none">
                                                     <td class="text-center" t-esc="line.subject_id.name"/>
-                                                    <td class="text-center" t-esc="line.min_marks"/>
+                                                    <td class="text-center" t-esc="line.max_marks"/>
                                                     <td class="text-center" t-esc="line.marks_obtained"/>
                                                     <td class="text-center">
                                                         <span t-field="line.grade"/>
@@ -108,9 +108,9 @@
                                         <table class="table mt-12; margin:0px !important; border-style: none">
                                             <tr style="margin:0px; border-style: none">
                                                 <th name="th_personality_id" class="text-center">Personality</th>
-                                                <th name="th_grade" class="text-center">Grade</th>
+                                                <th name="th_grade_1" class="text-center">Grade</th>
                                                 <th name="th_personality_id" class="text-center">Personality</th>
-                                                <th name="th_grade" class="text-center">Grade</th>
+                                                <th name="th_grade_2" class="text-center">Grade</th>
                                             </tr>
                                             <t t-foreach="o.personality_line_ids" t-as="line">
                                                 <tr style="margin:0px;">
@@ -119,14 +119,14 @@
                                                            class="text-center"/>
                                                     </td>
                                                     <td class="text-center; margin:0px;">
-                                                        <p style="margin:0px;" t-field="line.grade"/>
+                                                        <p style="margin:0px;" t-field="line.grade_1"/>
                                                     </td>
                                                     <td class="text-center; margin:0px;">
                                                         <p style="margin:0px;" t-field="line.points2"
                                                            class="text-center"/>
                                                     </td>
                                                     <td class="text-center; margin:0px;">
-                                                        <p style="margin:0px;" t-field="line.grade"/>
+                                                        <p style="margin:0px;" t-field="line.grade_2"/>
                                                     </td>
                                                 </tr>
                                             </t>
@@ -140,10 +140,10 @@
                                                     <p style="margin:0px; border-style: none" t-field="o.note"/>
                                                 </td>
                                                 <td style="margin:0px; border-style: none">
-                                                    <p style="margin:0px; border-style: none">Attaudence:</p>
+                                                    <p style="margin:0px; border-style: none">Attendance:</p>
                                                 </td>
                                                 <td style="margin:0px; border-style: none">
-                                                    <p style="margin:0px; border-style: none" t-field="o.attaudence"/>
+                                                    <p style="margin:0px; border-style: none" t-field="o.attendance"/>
                                                 </td>
                                             </tr>
                                         </table>

@@ -15,7 +15,7 @@
                 <field name="day"/>
 <!--                <field name="type"/>-->
                 <field name="subject_id"/>
-                <field name="total_hours"/>
+                <field name="time"/>
                 <field name="oral_description"/>
                 <field name="written_description"/>
                 <field name="description"/>
